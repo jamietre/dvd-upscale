@@ -1,0 +1,44 @@
+#!/bin/bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. "$DIR/project-profile"
+
+input="$deint_file"
+output="$image_dir"
+
+start_frame="0"
+
+if [[ -d "$output" ]]; then
+  echo "Getting last file..."
+  
+  start_frame=`"${DIR}/last-file" "$1" "$2"`
+  echo "Start frame: ${start_frame}"
+fi
+
+if [[ ! -f "$input" ]]; then
+  echo "Can't locate input $input"
+  exit 1
+fi
+
+if [[ ! -d "$output" ]]; then
+  mkdir "$output"
+fi
+
+#end_frame=14586
+
+echo "input: $input"
+echo "output: $output"
+echo "start frame: $start_frame"
+
+"$veai" --version
+set -x
+"$veai" --input "$input" --output "$output" \
+  --output-format "$file_type" \
+  --begin-frame "$start_frame" \
+  --width:height "1920:1080" \
+  -m "${model_name}" \
+  --grain-size ${grain_size} \
+  --grain-amount ${grain_amount} \
+
+
+# --output-format 16tif \

@@ -1,0 +1,6 @@
+#!/bin/bash
+set -euo pipefail
+
+./process voyager s1e06
+./process voyager s1e07
+./process voyager s1e08

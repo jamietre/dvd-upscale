@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. "$DIR/project-profile"
+
+"$dgindex" -i "${source_file}" \
+  -ia 5 \
+  -o "${source_root}" \
+  -om 2 -fo 0 -hide -exit >/dev/null
+

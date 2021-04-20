@@ -1,0 +1,18 @@
+#!/bin/bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. "$DIR/project-profile"
+
+cd "$DIR"
+
+# "$DIR/show"
+
+if [[ "$deint_model" != "none" ]]; then
+  ./dgindex "$1" "$2"
+  ./deint "$1" "$2"
+fi
+./upscale "$1" "$2"
+./encode-images "$1" "$2"
+./timestamp "$1" "$2"
+
+echo "Finished!"

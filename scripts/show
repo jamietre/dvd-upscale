@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. "$DIR/project-profile"
+
+echo "Selected project root: ${episode_root}"
+echo "Source root: $source_root.[VOB|mkv]"
+echo "Deinterlaced: $deint_file"
+echo "Timecodes: $timecodes_file"
+echo "Upscaled image dir: $image_dir"
+echo "Target: $target_file"
+echo "File ext: $file_ext"

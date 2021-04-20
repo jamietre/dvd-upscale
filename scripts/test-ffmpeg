@@ -1,0 +1,38 @@
+#!/bin/bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. "$DIR/project-profile"
+
+out="$target_file"
+
+# todo: make sure there are no gaps in image files before starting
+# audio is merged from original source file
+
+
+echo "$err"
+
+echo "$result"
+exit 1
+set -x
+ffmpeg -thread_queue_size 512 \
+ -i "$deint_file" \
+ -thread_queue_size 512 \
+ -probesize 50M \
+ -analyzeduration 60M \
+ -i "$source_file" \
+ -max_interleave_delta 0 \
+ -vf format=yuv420p10le \
+ -map 0:v:0 \
+ -c:v libx265 \
+ -crf 23 \
+ -profile:v main10 \
+ -preset veryfast \
+ -map 1:a? \
+ -c:a copy \
+ -map 1:s? \
+ -c:s copy \
+ -disposition:s:0 0 \
+ -r "$target_framerate" \
+ "$out"
+
+echo "Finished encoding ${target_file}"

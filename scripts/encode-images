@@ -1,0 +1,64 @@
+#!/bin/bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. "$DIR/project-profile"
+
+#out="$target_file"
+out="$ffmpeg_target_file"
+
+
+last_frame_images=`"${DIR}/last-file" $1 $2`
+
+# last_frame_input=`$DIR/count-frames "$1" "$2"`
+
+# if [[ "$last_frame_images" != "$last_frame_input" ]]; then
+#   echo "The input file has ${last_frame_input} frames, but the last image from was ${last_frame_images}"
+# fi
+
+# audio is merged from original source file
+
+ffmpeg -thread_queue_size 512 \
+ -framerate "$target_framerate" \
+ -i "$image_dir/%06d.png" \
+  -thread_queue_size 512 \
+ -i "$source_file" \
+  -max_interleave_delta 0 \
+ -vf format=yuv420p10le \
+ -map 0:v:0 \
+ -c:v libx265 \
+ -crf 20 \
+ -profile:v main10 \
+ -preset slower \
+ -map 1:a? \
+ -c:a copy \
+ -map 1:s? \
+ -c:s copy \
+ -disposition:s:0 0 \
+ -default_mode infer_no_subs \
+ -vsync 2 \
+ -map_chapters 1 \
+ -y \
+ "$out"
+echo "Finished encoding ${out}"
+
+
+# original - before vfr
+# ffmpeg -thread_queue_size 512 \  
+#  -i "$image_dir/%06d.${file_ext}" \
+#  -thread_queue_size 512 \
+#  -i "$source_file" \
+#  -max_interleave_delta 0 \
+#  -vf format=yuv420p10le \
+#  -map 0:v:0 \
+#  -c:v libx265 \
+#  -crf 20 \
+#  -profile:v main10 \
+#  -preset slower \
+#  -map 1:a? \
+#  -c:a copy \
+#  -map 1:s? \
+#  -c:s copy \
+#  -disposition:s:0 0 \
+#  -default_mode infer_no_subs \
+#  -vsync 2 \ 
+#  "$out"

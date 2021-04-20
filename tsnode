@@ -1,0 +1,19 @@
+#!/bin/bash
+
+declare -a node_args=()
+declare -a other_args=()
+while [[ $# -gt 0 ]]
+do 
+  case "$1" in
+   --inspect|--inspect-brk)
+     node_args+=($1)
+     shift 
+     ;;
+  *)
+     other_args+=($1)
+     shift
+     ;;
+  esac
+done
+
+node "${node_args[@]+"${node_args[@]}"}" -r ts-node/register "${other_args[@]+"${other_args[@]}"}"

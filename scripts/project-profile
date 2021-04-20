@@ -1,0 +1,93 @@
+#!/bin/bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+if [[ "${windrive:-}" == "" ]]; then
+  windrive="/c"
+fi
+
+function convert_path() {
+#  cygpath -w "$1"
+  re='^\/([c-z])/(.*)$'
+  local path_name="$1"
+  while [[ $path_name =~ $re ]]; do
+    path_name="${BASH_REMATCH[1]}:/${BASH_REMATCH[2]}"
+  done
+  echo $path_name
+}
+
+dgindex="${windrive}/data/apps/dgmpgdec2005/DGIndex.exe"
+ffmpeg="$windrive/ProgramData/chocolatey/bin/ffmpeg.exe"
+mkvmerge="${windrive}/Program Files/MKVToolNix/mkvmerge.exe"
+#veai="${windrive}/Program Files/Topaz Labs LLC/Topaz Video Enhance AI (BETA)/veai.exe"
+veai="${windrive}/Program Files/Topaz Labs LLC/Topaz Video Enhance AI/veai.exe"
+dvddecrypter="${windrive}/Program Files (x86)/DVD Decrypter/DVDDecrypter.exe"
+# default settings
+
+# If your episodes are named like "Star Trek Voyager - S1E01 - Caretaker", then this should be
+# "Star Trek Voyager"
+episode_root="[undefined]"
+model_name="ghq-5"
+deint_model="ivtc"
+file_type="png"
+aspect="16:9"
+target_framerate="24000/1001"
+grain_size="0"
+grain_amount="0"
+
+profile_name=$1
+profile_file="${DIR}/../config/${profile_name}"
+if [[ ! -f "$profile_file" ]]; then
+  echo "\"${profile_file}\" was not found."
+  exit 1
+fi
+
+# load the profile
+. "$profile_file"
+
+case "$file_type" in
+  8tif|16tif)
+    file_ext="tif"
+    ;;
+  png)
+    file_ext="png"
+    ;;
+  *)
+    echo "Unknown file type $file_type"
+    exit 1
+esac
+
+episode="${2:-}"
+if [[ "$episode" == "" ]]; then
+  echo "Must provide an episode glob as the 2nd argument"
+  exit 1
+fi
+
+
+input_ext="VOB"
+
+# either match the string exactly; or try to glob it as "S1E02" e.g.
+if [[ ! -f "${project_dir}/${episode}" ]]; then
+  episode=`node "${DIR}/../js/get-episode" "${project_dir}" "${episode_root} - ${episode}*.${input_ext}"` || { 
+    echo "$episode" 
+    exit 1 
+  }
+fi
+
+root_filename="${episode}"
+source_root="$project_dir/$root_filename"
+source_file="${source_root}.${input_ext}"
+
+if [[ "$deint_model" != "none" ]]; then
+  root_filename_out="${root_filename}.${deint_model}"
+else 
+  root_filename_out="${root_filename}"
+fi
+deint_file="$project_dir/${root_filename_out}.mkv"
+timecodes_file_name="${root_filename}.timecodes.txt"
+chapters_file_name="${root_filename}.txt"
+timecodes_file="$project_dir/$timecodes_file_name"
+image_dir="$project_dir/${root_filename_out}.${model_name}"
+ffmpeg_target_file="$project_dir/${root_filename_out}.${model_name}.h265.ntc.mkv"
+target_file="$project_dir/${root_filename_out}.${model_name}.h265.mkv"
+
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. "$DIR/project-profile"
+
+# "$veai" --help
+node "$DIR/../js/folder-stats.js" "$image_dir"
+
+echo "source file frames:"
+ffmpeg -i "${source_file}" -map 0:v:0 -c copy -f null -y /dev/null 2>&1 | grep -Eo 'frame= *[0-9]+ *' | grep -Eo '[0-9]+' | tail -1
+
+echo "deinterlated file frames:"
+ffmpeg -i "${deint_file}" -map 0:v:0 -c copy -f null -y /dev/null 2>&1 | grep -Eo 'frame= *[0-9]+ *' | grep -Eo '[0-9]+' | tail -1

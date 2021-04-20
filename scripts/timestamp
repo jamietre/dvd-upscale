@@ -1,0 +1,13 @@
+#!/bin/bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. "$DIR/project-profile"
+
+cd "$project_dir"
+"$mkvmerge" -o "$target_file" \
+--timestamps "0:${timecodes_file_name}" \
+ "$ffmpeg_target_file"
+
+echo "Finished adding timecodes to ${target_file}"
+
+# --chapters "${chapters_file_name}"

@@ -1,0 +1,42 @@
+#!/bin/bash
+set -euo pipefail
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. "$DIR/project-profile"
+
+tmpfile=$(mktemp /tmp/abc-script.XXXXXX.avs)
+
+infile_root=$(convert_path "${source_root}")
+infile=$(convert_path "${source_root}.mkv")
+infile_d2v=$(convert_path "${source_root}.d2v")
+outfile=$(convert_path "$deint_file")
+outfile_timestamps=$(convert_path "$timecodes_file")
+
+echo "Input: \"$infile\""
+echo "d2v: \"$infile_d2v\""
+echo "Output: \"$outfile\""
+
+function write_avs() {
+  local addons="${1:-}"
+  echo "infile=\"$infile\"" >"$tmpfile"
+  echo "infile_d2v=\"$infile_d2v\"" >>"$tmpfile"
+  echo "infile_root=\"$infile_root\"" >>"$tmpfile"
+  echo "outfile_timecodes=\"${outfile_timestamps}\"" >>"$tmpfile"
+  echo "mode=1" >>"$tmpfile"
+  if [[ "$addons" != "" ]]; then
+    echo "$addons" >>"$tmpfile"
+  fi
+  cat "$DIR/../avis/${deint_model}.avs" >>"$tmpfile"
+  cat -n "$tmpfile" 
+
+}
+
+#opts=("-ss" "00:00:00" "-to" "00:00:40")
+write_avs
+"$ffmpeg" -i "$tmpfile" ${opts[@]+"${opts[@]}"}  -f avi -c:v huffyuv -c:a copy -aspect "$aspect" -y "$outfile"
+if [[ "$deint_model" == "ivtc4" ]] || [[ "$deint_model" == "ivtc5" ]]; then
+  write_avs "mode=2"
+  "$ffmpeg" -i "$tmpfile" ${opts[@]+"${opts[@]}"}  -f avi -c:v huffyuv -c:a copy -aspect "$aspect" -y "$outfile"
+  rm -rf "${source_root}.temp_*"
+fi
+
+trap 'rm -f -- "$tmpfile"' INT TERM HUP EXIT
