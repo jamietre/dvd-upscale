@@ -1,5 +1,6 @@
 import { assertFileExists } from "../util/assert";
 import { loadConfigFile } from "../util/node/config-file";
+import { UnknownObject } from "../util/types";
 
 export interface Config {
   ffmpeg: string;
@@ -9,7 +10,7 @@ export interface Config {
   dvdDecrypter: string;
 }
 
-export async function getValidConfig(obj: object | Config): Promise<Config> {
+export async function getValidConfig(obj: UnknownObject | Config): Promise<Config> {
   const config = obj as Config;
   await Promise.all([
     assertFileExists(config.dgindex),

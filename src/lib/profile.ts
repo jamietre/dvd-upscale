@@ -4,12 +4,13 @@ import path from "path";
 
 import { assertIncludes } from "../util/assert";
 import { loadConfigFile } from "../util/node/config-file";
+import { assertIsDefined, UnknownObject } from "../util/types";
 import { Episode } from "./episode";
 
 const { readFile } = promises;
 
-export const deintModels = ["itvt1", "ivtc2", "ivtc3", "ivtc4"] as const;
-export type DeintModel = typeof deintModels[number];
+export const deintModelPresetNames = ["none", "ivtc5"] as const;
+export type DeintModelPreset = typeof deintModelPresetNames[number];
 
 export const upscaleModels = ["ghq-5", "amq-12"] as const;
 export type UpscaleModel = typeof upscaleModels[number];
@@ -33,8 +34,30 @@ export type EpisodeData = {
   pgc: number;
 };
 
+export type AvisynthScript = {
+  scriptPath: string;
+  passes?: number;
+};
+export type DeintModelSpec = {
+  name: string;
+  scripts: AvisynthScript[];
+};
+
+const deintModelPresets = {
+  ivtc5: {
+    name: "ivtc5",
+    scripts: [
+      {
+        scriptPath: "<configDir>/avisynth/ivtc5.avs",
+        passes: 2,
+      },
+    ],
+  },
+};
+
 export type ProfileConfig = {
-  deintModel: DeintModel;
+  deintModel: DeintModelPreset;
+  deintModelSpec: DeintModelSpec;
   upscaleModel: UpscaleModel;
   grainSize: number;
   grainAmount: number;
@@ -56,6 +79,7 @@ export interface Profile {
   config: ProfileConfig;
   episodes: EpisodeData[];
   getEpisode({ season, episodeNum }: Pick<EpisodeData, "season" | "episodeNum">): Episode;
+  getDeintModel(): DeintModelSpec;
 }
 
 export class ProfileImpl implements Profile {
@@ -79,6 +103,15 @@ export class ProfileImpl implements Profile {
       data,
     });
   }
+  getDeintModel(): DeintModelSpec {
+    const { config } = this;
+    const preset = config.deintModel;
+    if (preset === "none") {
+      assertIsDefined(config.deintModelSpec);
+      return config.deintModelSpec;
+    }
+    return deintModelPresets[preset];
+  }
   /**
    * Get the full name of the show, e.g. "Star Trek Voyager"
    */
@@ -87,9 +120,9 @@ export class ProfileImpl implements Profile {
   }
 }
 
-function assertIsProfileConfig(obj: object | ProfileConfig): asserts obj is ProfileConfig {
+function assertIsProfileConfig(obj: UnknownObject | ProfileConfig): asserts obj is ProfileConfig {
   const profile = obj as ProfileConfig;
-  assertIncludes(deintModels, profile.deintModel, "deinterlace model");
+  assertIncludes(deintModelPresetNames, profile.deintModel, "deinterlace model");
   assertIncludes(upscaleModels, profile.upscaleModel, "upscale model");
   assertIncludes(targetFramerates, profile.targetFramerate, "framerate");
   assertIncludes(aspectRatios, profile.aspectRatio, "aspect ratio");

@@ -29,4 +29,4 @@ type Stats = {
 //     return Math.floor(number*100)/100
 // }
 
-function getStats(context: Context): Promise<Stats> {}
+async function getStats(context: Context): Promise<Stats> {}

@@ -1,7 +1,8 @@
-import { ChildProcess, spawn, SpawnOptions } from 'child_process';
-import { Readable } from 'stream';
-import { createDeferred } from '../promises';
-import { cleanSplitLines } from '../strings';
+import { ChildProcess, spawn, SpawnOptions } from "child_process";
+
+import { Readable } from "stream";
+import { createDeferred } from "../promises";
+import { cleanSplitLines } from "../strings";
 
 export type LogReader = (text: string) => void;
 export type RunCommandOptions = {
@@ -45,7 +46,7 @@ export function runCommand2(
     });
 
   function consumeOutput(stream: Readable, handler: (message: Buffer) => void) {
-    stream.on('readable', () => {
+    stream.on("readable", () => {
       let data: Buffer;
       while ((data = stream.read())) {
         handler(data);
@@ -54,25 +55,26 @@ export function runCommand2(
   }
   const child = spawn(command, args, nodeOptions);
   const deferred = createDeferred<string[]>();
-  consumeOutput(child.stdout!, (data) =>
-    processCommandOutputToReader(data, reader)
-  );
-  consumeOutput(child.stderr!, (data) =>
-    processCommandOutputToReader(data, reader)
-  );
 
-  child.on('error', (err: Error) => {
+  if (child.stdout) {
+    consumeOutput(child.stdout, msg => reader(msg.toString()));
+  }
+  if (child.stderr) {
+    consumeOutput(child.stderr, msg => reader(msg.toString()));
+  }
+
+  child.on("error", (err: Error) => {
     deferred.reject(err);
   });
-  child.on('exit', (code) => {
+  child.on("exit", code => {
     if (code === 0) {
-      deferred.resolve(cleanSplitLines(output.join('\n')));
+      deferred.resolve(cleanSplitLines(output.join("\n")));
       return;
     }
-    deferred.reject(new Error(output.join('\n')));
+    deferred.reject(new Error(output.join("\n")));
   });
   if (messageHandler) {
-    child.on('message', messageHandler);
+    child.on("message", messageHandler);
   }
   return { child, messages: deferred.promise() };
 }
@@ -80,20 +82,16 @@ export function runCommand2(
 export async function runCommandInteractive(command: string, args: string[]) {
   return new Promise((resolve, reject) => {
     const child = spawn(command, args, {
-      stdio: 'inherit',
+      stdio: "inherit",
       shell: true,
     });
 
-    child.on('error', (err: Error) => {
+    child.on("error", (err: Error) => {
       reject(err);
     });
-    child.on('exit', (code) => {
+    child.on("exit", code => {
       const final = code === 0 ? resolve : reject;
       final();
     });
   });
-}
-
-function processCommandOutputToReader(text: Buffer, reader: LogReader) {
-  cleanSplitLines(text.toString()).forEach(reader);
 }

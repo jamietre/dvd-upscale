@@ -4,7 +4,6 @@
 ## mode
 
 D2VSource(infile_d2v)
-ConvertToYV12(interlaced=true)
 
 # Uncomment to test
 #trim(0,4800)
@@ -23,21 +22,23 @@ function get_metrics(clip Input, string "d2v", string "TfmFile", string "Metrics
 
 #Pass 02
 function process(clip Input, string "d2v", string "TfmFile", string "Metrics", string "Timestamps") {
+  ConvertToYV12(Input)
   fft3dfilter(sigma=3,sigma2=3,sigma3=12,sigma4=3,bt=3,plane=2)
   chroma = checkmate(thr=12,max=25,tthr2=25)
   luma   = checkmate(thr=12,max=25,tthr2=0)
   fixed  = luma.MergeChroma(chroma)
 
-  tfm(Input,input=TfmFile)
+  tfm(input=TfmFile)
   tdecimate(mode=5, hybrid=2, cycleR=1, vfrDec=0, input=Metrics, tfmIn=TfmFile, mkvOut=Timestamps)
-
-  santiag()
+  
   Deblock()
-  pSharpen()
-
-  QTGMC(inputtype = 1, EZDenoise = 1.00)
+  
+  QTGMC2 = QTGMC(Preset="Very Slow", TR2=4, SourceMatch=3, Lossless=2, InputType=2, noiserestore=0.1, NoiseDeint="Generate", grainrestore=0.1, MatchEnhance=0.75, Sharpness=0.5, MatchPreset="Very Slow", MatchPreset2="Very Slow")
+  QTGMC3 = QTGMC(preset="Very Slow", TR2=4, SourceMatch=3, Lossless=2, InputType=3)
+  Repair(QTGMC2, QTGMC3, 9)
+  
+  santiag()
   Crop(8, 0, 704, 480)
-  #BicubicResize(720, 540)
   Spline64Resize(720, 540)
 }
 

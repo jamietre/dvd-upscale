@@ -47,11 +47,15 @@ export type EncoderLibx265 = Encoder & {
   preset: Libx265Preset;
 };
 
+export type EncoderHuffYuv = Encoder & {
+  name: "huffyuv";
+};
+
 type EncoderCopy = Encoder & {
   name: "copy";
 };
 
-type VideoEncoder = EncoderCopy | EncoderLibx265;
+type VideoEncoder = EncoderCopy | EncoderLibx265 | EncoderHuffYuv;
 type AudioEncoder = EncoderCopy;
 type SubtitleEncoder = EncoderCopy;
 
@@ -67,7 +71,10 @@ export type InputFile = {
   inputPath: string;
   inputIndex: number;
   threadQueueSize?: number;
+  inputFormat?: "avi";
 };
+
+export type Aspect = "4:3" | "16:9";
 
 export type OutputStream =
   | {
@@ -78,6 +85,7 @@ export type OutputStream =
       type: "v";
       codec: VideoEncoder;
       format?: VideoFormat;
+      aspect?: Aspect;
     }
   | {
       type: "s";
@@ -87,7 +95,7 @@ export type OutputStream =
 
 type OutputFile = {
   stream: OutputStream;
-  map: Map;
+  map?: Map;
 };
 
 type GlobalOptions = {
@@ -140,19 +148,22 @@ export class FFMpeg {
     this.inputs.forEach(input => {
       args.push("-i", input.inputPath);
       if (input.threadQueueSize !== undefined) {
-        args.push("thread_queue_size", String(input.threadQueueSize));
+        args.push("-thread_queue_size", String(input.threadQueueSize));
+      }
+      if (input.inputFormat !== undefined) {
+        args.push("-f", input.inputFormat);
       }
     });
-
-    this.addGlobalOptions(args);
 
     this.outputs.forEach(stream => {
       const { stream: output, map } = stream;
 
       const { codec, type } = output;
 
-      const mapArgValue = getStreamSpecifier(type, map.input.inputIndex, map.streamIndex);
-      args.push("-map", mapArgValue);
+      if (map) {
+        const mapArgValue = getStreamSpecifier(type, map.input.inputIndex, map.streamIndex);
+        args.push("-map", mapArgValue);
+      }
       const codecArg = `-c:${type}`;
       const codecArgValue = `${codec.name}`;
       args.push(codecArg, codecArgValue);
@@ -163,10 +174,13 @@ export class FFMpeg {
           if (output.format) {
             args.push("-vf", `format=${output.format}`);
           }
+          if (output.aspect) {
+            args.push("-aspect", output.aspect);
+          }
 
           break;
         case "s":
-          if (output.disposition) {
+          if (map && output.disposition) {
             args.push(`-disposition:s:${map.streamIndex}`, output.disposition);
           }
           break;
@@ -184,6 +198,7 @@ export class FFMpeg {
     }
     return args;
   }
+
   async run(outputFile?: string): Promise<void> {
     const { config } = this;
     if (outputFile) {
@@ -192,7 +207,11 @@ export class FFMpeg {
     }
 
     const args = this.getArgs(outputFile);
-    await runCommand(config.ffmpeg, args);
+    args.push("-loglevel", "quiet", "-stats");
+
+    await runCommand(config.ffmpeg, args, {
+      logReader: this.logReader,
+    });
   }
 
   private addGlobalOptions(args: string[]) {
@@ -207,6 +226,12 @@ export class FFMpeg {
       args.push("-y");
     }
   }
+
+  private logReader = (message: string) => {
+    // process.stdout.clearLine(0);
+    // process.stdout.cursorTo(0);
+    process.stdout.write(message);
+  };
   // private validateOptions() {
   //   this.outputStreams.forEach((stream, index) => {
   //     if (
@@ -243,7 +268,7 @@ function getStreamSpecifier(
 }
 
 function getEncoderArgs(encoder: VideoEncoder | AudioEncoder): string[] {
-  let args: string[] = [];
+  const args: string[] = [];
   switch (encoder.name) {
     case "copy":
       break;
@@ -252,7 +277,7 @@ function getEncoderArgs(encoder: VideoEncoder | AudioEncoder): string[] {
         args.push("-crf", String(encoder.crf));
       }
       if (encoder.profile) {
-        let argName = `-profile:v`;
+        const argName = `-profile:v`;
         args.push(argName, encoder.profile);
       }
       if (encoder.preset) {

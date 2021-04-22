@@ -2,6 +2,7 @@
 // todo: stand up a typescript project
 // use minimatch
 import { promises } from "fs";
+import { getDgIndexDataForEpisode } from "../tools/dgindex";
 import { existsDirectory } from "../util/node/fs-helpers";
 import { EpisodeData, Profile, ProfileConfig } from "./profile";
 const { mkdir } = promises;
@@ -67,10 +68,12 @@ export class Episode {
       vob: baseFileName + ".VOB",
       ifo: baseFileName + ".IFO",
       chapters: baseFileName + ".chapters.txt",
+      timecodeMetrics: baseFileName + ".timecodes.txt",
+      deinterlacedAvi: `${baseFileName}.${this.profile.getDeintModel().name}.mkv`,
     };
   }
-  getDgIndexFiles() {
-    return;
+  async getDgIndexFiles() {
+    return getDgIndexDataForEpisode(this);
   }
 }
 

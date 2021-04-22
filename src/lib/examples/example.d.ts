@@ -17,8 +17,7 @@
  * something();
  * ```
  */
-declare module 'module-name' {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare module "module-name" {
   const whatever: any;
   export = whatever;
 }

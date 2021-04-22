@@ -1,10 +1,29 @@
 # dvd-upscale
 
-DVD upscale
+Tooling to automate workflows for processing DVD video.
 
-## Configuration
+## Status
 
-### DVDDecrypter
+Very much a work in progress.
 
-Tools -> Settings -> Registry -> Shell Extensions
-Uncheck "Autoplay" and "DVD"
+## Contents
+
+`scripts/`
+`js`
+`avis`
+
+A bunch of bash scripts hacked together that pretty much work, but are not very configurable.
+
+`src/`
+
+TypeScript code to replace `scripts`.
+
+`src/tools`
+
+TypeScript abstractions of tools used in this process:
+
+- dvd decrypter
+- dgindex
+- ffmpeg
+- avisynth
+- topaz veai

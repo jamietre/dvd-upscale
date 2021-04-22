@@ -18,7 +18,7 @@
  * @returns a Promise which should contain `['a','b','c']`
  */
 export const asyncABC = async () => {
-  const somethingSlow = (index: 0 | 1 | 2) => {
+  const somethingSlow = async (index: 0 | 1 | 2) => {
     const storage = 'abc'.charAt(index);
     return new Promise<string>((resolve) =>
       // later...

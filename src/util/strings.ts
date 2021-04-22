@@ -55,7 +55,7 @@ export function cleanSplitLines(lines: string): string[] {
   return splitLines(lines).filter((e) => !!e);
 }
 
-export function joinWithAnd(items: string[], separator: string = ', ') {
+export function joinWithAnd(items: string[], separator = ', ') {
   if (items.length <= 1) {
     return items.join(separator);
   }
@@ -77,7 +77,7 @@ function isLetter(char: string) {
 export function truncateString(
   message: string,
   maxLength: number,
-  truncationMessage: string = ''
+  truncationMessage = ''
 ) {
   if (message.length > maxLength) {
     return message.slice(0, maxLength) + truncationMessage;

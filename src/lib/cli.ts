@@ -1,6 +1,6 @@
 import { ArgumentParser } from "argparse";
 import { loadConfig } from "./config";
-import { Context } from "./context";
+import { CliContext, Context } from "./context";
 import { Episode, parseEpisodeId } from "./episode";
 import { loadProfile } from "./profile";
 
@@ -31,10 +31,12 @@ async function commonCli(callback: CliCallback) {
   const profile = await loadProfile(args.project);
   const episodeId = parseEpisodeId(args.episodeId);
   const episode = profile.getEpisode(episodeId);
-  const context = new Context({
+  const context = new CliContext({
     config,
     profile,
   });
+  context.logger.info(`Work dir: ${episode.getWorkDir()}`);
+
   await callback(context, episode);
 }
 

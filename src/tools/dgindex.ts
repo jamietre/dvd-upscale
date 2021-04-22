@@ -90,7 +90,7 @@ export class DgIndex {
   }
 }
 
-const audioStreamRegex = /^dgindex T(\d+) (.+) (.+) DELAY (\d+)ms\.(.*)$/;
+const audioStreamRegex = /dgindex T(\d+) (.+) (.+) DELAY (\d+)ms\.(.*)$/;
 function parseAudioStreams(fileNames: string[]): AudioStream[] {
   return fileNames.map(fileName => {
     const match = fileName.match(audioStreamRegex);
@@ -119,7 +119,7 @@ async function parseDgIndexOutput(dir: string): Promise<DgIndexFiles> {
   const audioStreamFiles: string[] = [];
 
   files
-    .filter(e => e.startsWith("dgindex"))
+    .filter(e => e.includes(".dgindex"))
     .forEach(file => {
       const extname = path.extname(file).toLowerCase();
       if (/ DELAY /.test(file)) {
@@ -138,7 +138,7 @@ async function parseDgIndexOutput(dir: string): Promise<DgIndexFiles> {
   return out;
 }
 
-export async function generateDgIndex(context: Context, episode: Episode) {
+export async function generateDgIndex(context: Context, episode: Episode): Promise<void> {
   const { logger } = context;
   const dgindex = new DgIndex(context.config, {
     exit: true,
@@ -150,7 +150,7 @@ export async function generateDgIndex(context: Context, episode: Episode) {
 
   const files = episode.getFileNames();
   const workDir = episode.getWorkDir();
-  const dgIndexRootPath = `${workDir}/dgindex`;
+  const dgIndexRootPath = `${workDir}/${episode.getBaseFileName()}.dgindex`;
   logger.info(`Indexing "${files.vob}"...`);
   await dgindex.run({
     sourceFile: `${episode.getWorkDir()}/${files.vob}`,
@@ -158,7 +158,7 @@ export async function generateDgIndex(context: Context, episode: Episode) {
   });
 
   const outfiles = await parseDgIndexOutput(workDir);
-  console.log(outfiles);
+  logger.info(`Finished; extracted d2v + ${outfiles.audioStreams.length} audio streams`);
 }
 
 export async function getDgIndexDataForEpisode(episode: Episode): Promise<DgIndexFiles> {
