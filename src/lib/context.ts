@@ -7,21 +7,16 @@ type ContextOptions = {
   profile: Profile;
 };
 
-export interface Context {
-  config: Config;
-  profile: Profile;
-  logger: Logger;
-}
 /**
  * A context for operations in a given project
  */
-export class CliContext {
+export class Context {
   config: Config;
   profile: Profile;
   logger: Logger;
   constructor(options: ContextOptions) {
     this.config = options.config;
     this.profile = options.profile;
-    this.logger = console;
+    this.logger = new Logger(console);
   }
 }

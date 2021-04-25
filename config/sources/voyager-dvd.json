@@ -1,0 +1,385 @@
+{
+  "discs": [
+    {
+      "season": 1,
+      "disc": 1,
+      "hashes": []
+    }
+  ],
+  "episodes": [
+    {
+      "season": 1,
+      "episodeNum": "0102",
+      "episodeOrder": 1,
+      "title": "Caretaker",
+      "disc": 1,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Parallax",
+      "disc": 1,
+      "vts": 3,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Time and Again",
+      "disc": 1,
+      "vts": 3,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Phage",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "The Cloud",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Eye of the Needle",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Ex Post Facto",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 4
+    },
+
+    {
+      "season": 1,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Emanations",
+      "disc": 3,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Prime Factors",
+      "disc": 3,
+      "vts": 3,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "State of Flux",
+      "disc": 3,
+      "vts": 3,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Heroes and Demons",
+      "disc": 3,
+      "vts": 3,
+      "pgc": 4
+    },
+
+    {
+      "season": 1,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Cathexis",
+      "disc": 4,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Faces",
+      "disc": 4,
+      "vts": 3,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Jetrel",
+      "disc": 4,
+      "vts": 3,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Learning Curve",
+      "disc": 4,
+      "vts": 3,
+      "pgc": 4
+    },
+
+    {
+      "season": 2,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "The 37's",
+      "disc": 1,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Initiations",
+      "disc": 1,
+      "vts": 3,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Projections",
+      "disc": 1,
+      "vts": 3,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Elogium",
+      "disc": 1,
+      "vts": 3,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Non Sequitur",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Twisted",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Parturition",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Persistence of Vision",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 4
+    },
+
+    {
+      "season": 2,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Tattoo",
+      "disc": 3,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Cold Fire",
+      "disc": 3,
+      "vts": 3,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Maneuvers",
+      "disc": 3,
+      "vts": 3,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Resistance",
+      "disc": 3,
+      "vts": 3,
+      "pgc": 4
+    },
+
+    {
+      "season": 2,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Prototype",
+      "disc": 4,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Alliances",
+      "disc": 4,
+      "vts": 3,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Threshold",
+      "disc": 4,
+      "vts": 3,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Meld",
+      "disc": 4,
+      "vts": 3,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Dreadnaught",
+      "disc": 5,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Death Wish",
+      "disc": 5,
+      "vts": 3,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Lifesigns",
+      "disc": 5,
+      "vts": 3,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Investigations",
+      "disc": 5,
+      "vts": 3,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Deadlock",
+      "disc": 6,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Innocence",
+      "disc": 6,
+      "vts": 3,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "23",
+      "episodeOrder": 23,
+      "title": "The Thaw",
+      "disc": 6,
+      "vts": 3,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "24",
+      "episodeOrder": 24,
+      "title": "Tuvix",
+      "disc": 6,
+      "vts": 3,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "25",
+      "episodeOrder": 25,
+      "title": "Resolutions",
+      "disc": 7,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "26",
+      "episodeOrder": 26,
+      "title": "Basics",
+      "disc": 7,
+      "vts": 2,
+      "pgc": 2
+    }
+  ]
+}

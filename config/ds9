@@ -1,0 +1,6 @@
+  deint_model="ivtc2"
+  project_dir="/j/VideoIncoming/Deep Space Nine/S1"
+  episode_root="Star Trek DS9"
+  target_framerate="24000/1001"
+  aspect="4:3"
+  file_type="png"

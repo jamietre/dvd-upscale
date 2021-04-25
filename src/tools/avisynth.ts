@@ -1,5 +1,4 @@
 import { promises } from "fs";
-import { Config } from "../lib/config";
 import { deleteFilesForPattern } from "../util/node/delete-files";
 
 import { TempDir } from "../util/node/tempdir";
@@ -14,26 +13,17 @@ export type AvisScriptOptions = {
   timecodeFileName: string;
 };
 
-type AviSynthOptions = {
-  config: Config;
-  ffmpegProvider: () => Required<FFMpeg>;
-  script: string;
-};
-
 export class AviSynth {
-  // readonly api: ScriptOptions;
-  constructor(private options: AviSynthOptions) {
-    // this.api = getApi(script);
-  }
-
+  constructor(private ffmpeg: FFMpeg) {}
   async run(runOptions: {
+    script: string;
     workDir: string;
     outputFile: string;
     aspect: Aspect;
     scriptOptions: AvisScriptOptions;
   }) {
-    const { script, ffmpegProvider } = this.options;
-    const { workDir, outputFile, scriptOptions, aspect } = runOptions;
+    const { ffmpeg } = this;
+    const { script, workDir, outputFile, scriptOptions, aspect } = runOptions;
     await deleteFilesForPattern(workDir, "avisynth-tmp*");
     const tmpDir = TempDir.createInDir(workDir, "avisynth-tmp");
 
@@ -49,7 +39,6 @@ export class AviSynth {
         .join("\n");
 
       await writeFile(avisFile, `${scriptVars}\n${script}`, "utf-8");
-      const ffmpeg = ffmpegProvider();
       const input = ffmpeg.createInput(avisFile);
       input.inputFormat = "avi";
 

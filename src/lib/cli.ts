@@ -1,10 +1,14 @@
+import { container } from "../util/di";
 import { ArgumentParser } from "argparse";
-import { loadConfig } from "./config";
-import { CliContext, Context } from "./context";
+import { loadConfig, Config } from "./config";
+import { Context } from "./context";
 import { Episode, parseEpisodeId } from "./episode";
-import { loadProfile } from "./profile";
+import { loadProfile, Profile } from "./profile";
+import { CommandRunner } from "../util/node/command-runner";
+import { FFMpeg } from "../tools/ffmpeg";
+import { Logger } from "./logger/logger";
 
-export type CliCallback = (context: Context, episode: Episode) => Promise<void>;
+export type CliCallback = (episode: Episode) => Promise<void>;
 
 type CliOptions = {
   project: string;
@@ -27,17 +31,30 @@ async function commonCli(callback: CliCallback) {
   const processArgv = process.argv.slice(nodeArgIndex + 2);
   const [args, _extra] = parser.parse_known_args(processArgv) as [CliOptions, unknown];
 
-  const config = await loadConfig();
-  const profile = await loadProfile(args.project);
+  await registerEnvironment(args.project);
+
   const episodeId = parseEpisodeId(args.episodeId);
+  const profile = container.resolve(Profile);
+  const context = container.resolve(Context);
   const episode = profile.getEpisode(episodeId);
-  const context = new CliContext({
+
+  context.logger.info(`Work dir: ${episode.getWorkDir()}`);
+
+  await callback(episode);
+}
+
+export async function registerEnvironment(profileName: string) {
+  const profile = await loadProfile(profileName);
+  const config = await loadConfig();
+  const context = new Context({
     config,
     profile,
   });
-  context.logger.info(`Work dir: ${episode.getWorkDir()}`);
-
-  await callback(context, episode);
+  container.register(Logger, { useValue: new Logger(console) });
+  container.register(Config, { useValue: config });
+  container.register(Context, { useValue: context });
+  container.register(CommandRunner, { useClass: CommandRunner });
+  container.register(FFMpeg, { useClass: FFMpeg });
 }
 
 export function startCli(callback: CliCallback) {

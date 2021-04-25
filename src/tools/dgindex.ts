@@ -1,8 +1,9 @@
+import { injectable, container } from "tsyringe";
 import path from "path";
 import { promises } from "fs";
 
 import { Config } from "../lib/config";
-import { runCommand } from "../util/node/run-command";
+import { CommandRunner } from "../util/node/command-runner";
 import { Context } from "../lib/context";
 import { Episode } from "../lib/episode";
 
@@ -44,7 +45,7 @@ enum FieldOperation {
   IgnorePulldownFlags = 2,
 }
 
-export type DgIndexOptions = {
+type DgIndexOptionsOptional = {
   idctAlgorithm?: IDCTAlgorithm;
   fieldOperation?: FieldOperation;
   outputMethod?: OutputMethod;
@@ -52,41 +53,49 @@ export type DgIndexOptions = {
   exit?: boolean;
 };
 
+export type DgIndexOptions = DgIndexOptionsOptional & {
+  sourceFile: string;
+  outputRoot: string;
+};
+
+@injectable()
 export class DgIndex {
-  idctAlgorithm?: IDCTAlgorithm;
-  fieldOperation?: FieldOperation;
-  outputMethod: OutputMethod;
-  hide?: boolean;
-  exit?: boolean;
-  constructor(private config: Config, options: DgIndexOptions = {}) {
-    this.outputMethod = options.outputMethod ?? OutputMethod.DemuxAllTracks;
-    this.fieldOperation = options.fieldOperation;
-    this.idctAlgorithm = options.idctAlgorithm;
-    this.hide = options.hide;
-    this.exit = options.exit;
-  }
-  async run(options: { sourceFile: string; outputRoot: string }): Promise<void> {
-    const { config } = this;
-    const { sourceFile, outputRoot } = options;
+  private static defaultOptions: DgIndexOptionsOptional = {
+    idctAlgorithm: IDCTAlgorithm.IEE1080,
+    fieldOperation: FieldOperation.HonorPulldownFlags,
+    outputMethod: OutputMethod.DemuxAllTracks,
+    hide: true,
+    exit: true,
+  };
+  constructor(private config: Config, private commandRunner: CommandRunner) {}
+  private getArgs(options: DgIndexOptions): string[] {
+    options = {
+      ...DgIndex.defaultOptions,
+      ...options,
+    };
     const args: string[] = [];
-    if (this.idctAlgorithm !== undefined) {
-      args.push("-ia", String(this.idctAlgorithm));
+    if (options.idctAlgorithm !== undefined) {
+      args.push("-ia", String(options.idctAlgorithm));
     }
-    if (this.fieldOperation !== undefined) {
-      args.push("-fo", String(this.fieldOperation));
+    if (options.fieldOperation !== undefined) {
+      args.push("-fo", String(options.fieldOperation));
     }
-    if (this.hide) {
+    if (options.hide) {
       args.push("-hide");
     }
-    if (this.exit) {
+    if (options.exit) {
       args.push("-exit");
     }
 
-    args.push("-om", String(this.outputMethod));
-    args.push("-i", sourceFile);
-    args.push("-o", outputRoot);
-
-    await runCommand(config.dgindex, args);
+    args.push("-om", String(options.outputMethod));
+    args.push("-i", options.sourceFile);
+    args.push("-o", options.outputRoot);
+    return args;
+  }
+  async run(options: DgIndexOptions): Promise<void> {
+    const { config, commandRunner } = this;
+    const args = this.getArgs(options);
+    await commandRunner.run(config.dgindex, args);
   }
 }
 
@@ -138,23 +147,28 @@ async function parseDgIndexOutput(dir: string): Promise<DgIndexFiles> {
   return out;
 }
 
-export async function generateDgIndex(context: Context, episode: Episode): Promise<void> {
+export async function generateDgIndex(episode: Episode): Promise<void> {
+  const context = container.resolve(Context);
+  const dgindex = container.resolve(DgIndex);
   const { logger } = context;
-  const dgindex = new DgIndex(context.config, {
+
+  const options = {
     exit: true,
     hide: true,
     idctAlgorithm: IDCTAlgorithm.IEE1080,
     fieldOperation: FieldOperation.HonorPulldownFlags,
     outputMethod: OutputMethod.DemuxAllTracks,
-  });
+  };
 
   const files = episode.getFileNames();
   const workDir = episode.getWorkDir();
   const dgIndexRootPath = `${workDir}/${episode.getBaseFileName()}.dgindex`;
+
   logger.info(`Indexing "${files.vob}"...`);
   await dgindex.run({
     sourceFile: `${episode.getWorkDir()}/${files.vob}`,
     outputRoot: dgIndexRootPath,
+    ...options,
   });
 
   const outfiles = await parseDgIndexOutput(workDir);

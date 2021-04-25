@@ -1,14 +1,14 @@
 import { promises } from "fs";
-import { Context } from "../lib/context";
+import { container } from "tsyringe";
 import { Episode } from "../lib/episode";
 import { getAbsolutePath } from "../util/node/files";
 import { AviSynth, AvisScriptOptions } from "./avisynth";
-import { FFMpeg } from "./ffmpeg";
 
 const { readFile } = promises;
 
-export async function deinterlace(context: Context, episode: Episode) {
+export async function deinterlace(episode: Episode) {
   const { profile } = episode;
+
   const workDir = episode.getWorkDir();
   const model = profile.getDeintModel();
   for (const script of model.scripts) {
@@ -16,12 +16,7 @@ export async function deinterlace(context: Context, episode: Episode) {
     for (let pass = 0; pass < passes; pass++) {
       const fileName = getAbsolutePath(script.scriptPath);
       const scriptText = await readFile(fileName, "utf-8");
-      const avis = new AviSynth({
-        config: context.config,
-        ffmpegProvider: () => new FFMpeg(context.config),
-        script: scriptText,
-      });
-
+      const avis = container.resolve(AviSynth);
       const dgIndexFiles = await episode.getDgIndexFiles();
       const baseFileName = episode.getBaseFileName();
       const scriptOptions: AvisScriptOptions = {
@@ -31,6 +26,7 @@ export async function deinterlace(context: Context, episode: Episode) {
         timecodeFileName: `${workDir}/${baseFileName}.timecode`,
       };
       await avis.run({
+        script: scriptText,
         workDir,
         aspect: profile.config.aspectRatio,
         outputFile: `${workDir}/${episode.getFileNames().deinterlacedAvi}`,

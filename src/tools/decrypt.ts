@@ -2,10 +2,11 @@ import path from "path";
 import { promises } from "fs";
 
 import { Config } from "../lib/config";
-import { runCommand } from "../util/node/run-command";
 import { Context } from "../lib/context";
 import { TempDir } from "../util/node/tempdir";
 import { Episode } from "../lib/episode";
+import { container, injectable } from "tsyringe";
+import { CommandRunner } from "../util/node/command-runner";
 
 const { readdir, rename } = promises;
 
@@ -22,9 +23,10 @@ export type DvdDecrypterOptions = {
   outputDir: string;
 };
 
+@injectable()
 export class DvdDecrypter {
   readonly mode = "IFO";
-  constructor(private config: Config) {}
+  constructor(private config: Config, private commandRunner: CommandRunner) {}
   async run(options: DvdDecrypterOptions): Promise<void> {
     const { config } = this;
     const args: string[] = [];
@@ -38,7 +40,7 @@ export class DvdDecrypter {
     args.push("/START");
     args.push("/CLOSE");
 
-    await runCommand(config.dvdDecrypter, args);
+    await this.commandRunner.run(config.dvdDecrypter, args);
   }
 }
 
@@ -55,7 +57,12 @@ export async function decryptDvd(options: {
     episode => episode.season === season && episode.disc === disc
   );
 
-  const dd = new DvdDecrypter(context.config);
+  if (toExtract.length === 0) {
+    throw new Error(
+      `There are no episodes for Season ${season}, Disc ${disc} - check your configuration for this project.`
+    );
+  }
+  const dd = container.resolve(DvdDecrypter);
 
   for await (const item of toExtract) {
     const episode = profile.getEpisode(item);

@@ -1,0 +1,6 @@
+project_dir="/j/VideoIncoming/Dark Angel/S1"
+episode_root="Dark Angel"
+deint_model="none"
+target_framerate="25"
+aspect="16:9"
+input_is_processed=0

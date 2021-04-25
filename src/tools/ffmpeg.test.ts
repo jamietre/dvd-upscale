@@ -1,5 +1,5 @@
 import { Context } from "node:vm";
-import { getTestContext } from "../test/test-context";
+import { getTestContext } from "../test/di";
 import { FFMpeg } from "./ffmpeg";
 
 describe("ffmpeg", () => {

@@ -1,17 +1,23 @@
+import { injectable } from "tsyringe";
 import { assertFileExists } from "../util/assert";
 import { loadConfigFile } from "../util/node/config-file";
+import { assignDefined } from "../util/objects";
 import { UnknownObject } from "../util/types";
 
-export interface Config {
-  ffmpeg: string;
-  veai: string;
-  dgindex: string;
-  mkvmerge: string;
-  dvdDecrypter: string;
+@injectable()
+export class Config {
+  ffmpeg!: string;
+  veai!: string;
+  dgindex!: string;
+  mkvmerge!: string;
+  dvdDecrypter!: string;
+  constructor(options: Required<Config>) {
+    assignDefined(this as Config, options);
+  }
 }
 
 export async function getValidConfig(obj: UnknownObject | Config): Promise<Config> {
-  const config = obj as Config;
+  const config = new Config(obj as Required<Config>);
   await Promise.all([
     assertFileExists(config.dgindex),
     assertFileExists(config.ffmpeg),

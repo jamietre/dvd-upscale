@@ -1,0 +1,6 @@
+  project_dir="/d/temp/Stargate SG-1/S1-VOB"
+  episode_root="Stargate SG1"
+  deint_model="ivtc3"
+  model_name="ghq-5"
+  aspect="16:9"
+  target_framerate="24000/1001" 

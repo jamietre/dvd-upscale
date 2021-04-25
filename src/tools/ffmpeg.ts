@@ -26,10 +26,11 @@
 // "$out"
 
 import path from "path";
+import { injectable } from "tsyringe";
 
 import { Config } from "../lib/config";
+import { CommandRunner } from "../util/node/command-runner";
 import { mkdirp } from "../util/node/fs-helpers";
-import { runCommand } from "../util/node/run-command";
 import { assertNever } from "../util/types";
 
 export type StreamType = "a" | "v" | "s";
@@ -107,12 +108,13 @@ type GlobalOptions = {
   vsync?: "auto" | "passthrough" | "cfr" | "vfr" | "drop";
 };
 
+@injectable()
 export class FFMpeg {
   private outputs: OutputFile[] = [];
   private inputs: InputFile[] = [];
   private globalOptions: GlobalOptions;
 
-  constructor(private config: Config) {
+  constructor(private config: Config, private commandRunner: CommandRunner) {
     this.globalOptions = this.getDefaultGlobalOptions();
   }
   createInput(inputPath: string) {
@@ -209,7 +211,7 @@ export class FFMpeg {
     const args = this.getArgs(outputFile);
     args.push("-loglevel", "quiet", "-stats");
 
-    await runCommand(config.ffmpeg, args, {
+    await this.commandRunner.run(config.ffmpeg, args, {
       logReader: this.logReader,
     });
   }

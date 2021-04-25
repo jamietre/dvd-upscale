@@ -84,7 +84,7 @@ else
 fi
 deint_file="$project_dir/${root_filename_out}.mkv"
 timecodes_file_name="${root_filename}.timecodes.txt"
-chapters_file_name="${root_filename}.txt"
+chapters_file_name="${root_filename}.chapters.txt"
 timecodes_file="$project_dir/$timecodes_file_name"
 image_dir="$project_dir/${root_filename_out}.${model_name}"
 ffmpeg_target_file="$project_dir/${root_filename_out}.${model_name}.h265.ntc.mkv"

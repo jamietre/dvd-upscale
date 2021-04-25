@@ -1,3 +1,5 @@
+require("reflect-metadata");
+
 const env = {
   NODE_ENV: "jest-test",
   LOCALSTACK_HOSTNAME: process.env.LOCALSTACK_HOSTNAME || "localhost",
@@ -24,6 +26,7 @@ module.exports = {
   roots: ["<rootDir>/src"],
   // moduleNameMapper: tsJestAliases,
   // setupFiles: ["./jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   snapshotSerializers: ["enzyme-to-json/serializer"],
   testEnvironment: "node",
   testRegex,

@@ -7,12 +7,12 @@ import { loadConfigFile } from "../util/node/config-file";
 import { assertIsDefined, UnknownObject } from "../util/types";
 import { Episode } from "./episode";
 
-const { readFile } = promises;
+const { readFile, writeFile } = promises;
 
 export const deintModelPresetNames = ["none", "ivtc5"] as const;
 export type DeintModelPreset = typeof deintModelPresetNames[number];
 
-export const upscaleModels = ["ghq-5", "amq-12"] as const;
+export const upscaleModels = ["ghq-5", "amq-12", "amq-13"] as const;
 export type UpscaleModel = typeof upscaleModels[number];
 
 export const targetFramerates = ["30000/10001", "24000/1001"] as const;
@@ -24,6 +24,17 @@ export type AspectRatios = typeof aspectRatios[number];
 export const imageFormats = ["png", "tiff8", "tiff16"] as const;
 export type ImageFormats = typeof imageFormats[number];
 
+export type ProjectDiscProfile = {
+  episodes: EpisodeData[];
+  discs: DiscData[];
+};
+
+export type DiscData = {
+  season: number;
+  disc: number;
+  hashes: string[];
+};
+
 export type EpisodeData = {
   season: number;
   episodeNum: string;
@@ -32,6 +43,7 @@ export type EpisodeData = {
   disc: number;
   vts: number;
   pgc: number;
+  hashes?: string[];
 };
 
 export type AvisynthScript = {
@@ -57,7 +69,7 @@ const deintModelPresets = {
 
 export type ProfileConfig = {
   deintModel: DeintModelPreset;
-  deintModelSpec: DeintModelSpec;
+  deintModelSpec?: DeintModelSpec;
   upscaleModel: UpscaleModel;
   grainSize: number;
   grainAmount: number;
@@ -75,21 +87,23 @@ export type ProfileConfig = {
   episodeRootName: string;
 };
 
-export interface Profile {
-  config: ProfileConfig;
-  episodes: EpisodeData[];
-  getEpisode({ season, episodeNum }: Pick<EpisodeData, "season" | "episodeNum">): Episode;
-  getDeintModel(): DeintModelSpec;
-}
-
-export class ProfileImpl implements Profile {
+export class Profile {
   get config(): ProfileConfig {
     return this.options.config;
   }
   get episodes(): EpisodeData[] {
-    return this.options.episodes;
+    return this.options.discProfile.episodes;
   }
-  constructor(private options: { config: ProfileConfig; episodes: EpisodeData[] }) {}
+  get discs(): DiscData[] {
+    return this.options.discProfile.discs;
+  }
+  constructor(
+    private options: {
+      config: ProfileConfig;
+      discProfile: ProjectDiscProfile;
+      discProfilePath: string;
+    }
+  ) {}
   getEpisode({ season, episodeNum }: Pick<EpisodeData, "season" | "episodeNum">): Episode {
     const episodeArr = this.episodes.filter(
       e => e.season === season && e.episodeNum === episodeNum
@@ -103,6 +117,31 @@ export class ProfileImpl implements Profile {
       data,
     });
   }
+  getEpisodesForDisc(season: number, disc: number) {
+    const episodeArr = this.episodes.filter(e => e.season === season && e.disc === disc);
+    if (this.episodes.length === 0) {
+      throw new Error(`Couldn't find season ${season}, disc ${disc}`);
+    }
+    return episodeArr;
+  }
+  getDiscProfile(season: number, disc: number): DiscData {
+    const discData = this.discs.filter(e => e.season === season && e.disc === disc);
+    if (discData.length !== 1) {
+      throw new Error(`Couldn't find season ${season}, disc ${disc}`);
+    }
+    return discData[0];
+  }
+  getDiscForHash(hash: string): { season: number; disc: number } | undefined {
+    const matches = this.discs.filter(e => e.hashes.includes(hash));
+    if (matches.length > 1) {
+      throw new Error(`There were multiple matches for the hash ${hash}, aborting.`);
+    }
+    if (matches.length === 0) {
+      return undefined;
+    }
+    const match = matches[0];
+    return { disc: match.disc, season: match.season };
+  }
   getDeintModel(): DeintModelSpec {
     const { config } = this;
     const preset = config.deintModel;
@@ -111,6 +150,14 @@ export class ProfileImpl implements Profile {
       return config.deintModelSpec;
     }
     return deintModelPresets[preset];
+  }
+  async saveDiscProfile(): Promise<void> {
+    const { discProfilePath } = this.options;
+    const data: ProjectDiscProfile = {
+      discs: this.discs,
+      episodes: this.episodes,
+    };
+    await writeFile(discProfilePath, JSON.stringify(data, null, 2), "utf-8");
   }
   /**
    * Get the full name of the show, e.g. "Star Trek Voyager"
@@ -137,10 +184,10 @@ export async function loadProfile(profileName: string): Promise<Profile> {
     sourcePath = appRootPath.resolve(`config/${sourcePath}`);
   }
   const episodesJson = await readFile(sourcePath, "utf-8");
-  const episodes = JSON.parse(episodesJson);
+  const discProfile = JSON.parse(episodesJson) as ProjectDiscProfile;
 
   assertIsProfileConfig(config);
 
-  const profile = new ProfileImpl({ config, episodes });
+  const profile = new Profile({ config, discProfile, discProfilePath: sourcePath });
   return profile;
 }

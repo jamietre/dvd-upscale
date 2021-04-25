@@ -1,0 +1,12 @@
+{
+  "deintModel": "ivtc5",
+  "upscaleModel": "amq-12",
+  "grainSize": 0.5,
+  "grainAmount": 1.6,
+  "projectDir": "j:/VideoIncoming/Star Trek Voyager",
+  "episodeRootName": "Star Trek Voyager",
+  "targetFramerate": "24000/1001",
+  "aspectRatio": "4:3",
+  "imageFormat": "png",
+  "seasonsSource": "./sources/voyager-dvd.json"
+}
