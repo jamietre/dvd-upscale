@@ -34,6 +34,69 @@
       "hashes": [
         "6c8ebf76734ae97fd6176d68cd31fc5edece5735"
       ]
+    },
+    {
+      "season": 1,
+      "disc": 6,
+      "hashes": [
+        "b69151ebfc92f0cb0d445549a0002556278493c4"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 1,
+      "hashes": [
+        "4ff25b247430a52afa6fedb13c07db3bc3c8a76e"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 2,
+      "hashes": [
+        "5da186eef8194b42c5d48724d791352ae7cd830a"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 3,
+      "hashes": [
+        "6afa42358a27a12ca00e5738b5d055fad602ceeb"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 4,
+      "hashes": [
+        "0015e156cceb5ff97239c61562d6c49f9625b7ac"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 5,
+      "hashes": [
+        "1405322ebae85df721cfa1313e84257c57bdf205"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 6,
+      "hashes": [
+        "1be6b7ee8e07df3cfd96368624f5e6f7a23e14d5"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 7,
+      "hashes": [
+        "28a05c6236bc0ca7ada741a0bf201f36150ca0b6"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 1,
+      "hashes": [
+        "c0e3f60a20f20ab0681dbdfb30dd27ec98d27c5b"
+      ]
     }
   ],
   "episodes": [
@@ -357,7 +420,7 @@
       "episodeNum": "17",
       "episodeOrder": 17,
       "title": "Playing God",
-      "disc": 4,
+      "disc": 5,
       "vts": 2,
       "pgc": 1
     },
@@ -366,7 +429,7 @@
       "episodeNum": "18",
       "episodeOrder": 18,
       "title": "Profit and Loss",
-      "disc": 4,
+      "disc": 5,
       "vts": 2,
       "pgc": 2
     },
@@ -375,7 +438,7 @@
       "episodeNum": "19",
       "episodeOrder": 19,
       "title": "Blood Oath",
-      "disc": 4,
+      "disc": 5,
       "vts": 2,
       "pgc": 3
     },
@@ -384,7 +447,7 @@
       "episodeNum": "20",
       "episodeOrder": 20,
       "title": "The Maquis, Part 1",
-      "disc": 4,
+      "disc": 5,
       "vts": 2,
       "pgc": 4
     },
@@ -897,6 +960,708 @@
       "episodeNum": "26",
       "episodeOrder": 25,
       "title": "Broken Link",
+      "disc": 7,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Apocalypse Rising",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "The Ship",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Looking for par-Mach in All the Wrong Places",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Nor the Battle to the Strong",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "The Assignment",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Trials and Tribble-ations",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Let He Who is Without Sin",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Things Past",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "The Ascent",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Rapture",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "The Darkness and the Light",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "The Begotten",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "For the Uniform",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "In Purgatorys Shadow",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "By Infernos Light",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Doctor Bashir I Presume",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "A Simple Investigation",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Business as Usual",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Ties of Blood and Water",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Ferengi Love Songs",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Soldiers of the Empire",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Children of Time",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "23",
+      "episodeOrder": 23,
+      "title": "Blaze of Glory",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "24",
+      "episodeOrder": 24,
+      "title": "Empok Nor",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "25",
+      "episodeOrder": 25,
+      "title": "In the Cards",
+      "disc": 7,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "26",
+      "episodeOrder": 26,
+      "title": "Call to Arms",
+      "disc": 7,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "A Time to Stand",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Rocks and Shoals",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Sibs abd Daughters",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Behind the Lines",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Favor the Bold",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Sacrifice of Angels",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "You are Cordially Invited",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Resurrection",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Statistical Probabilities",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "The Magnificent Ferengi",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Waltz",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Who Mourns for Morn",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Far Beyond the Stars",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "One Little Ship",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Honor Among Thieves",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Change of Heart",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Wrongs Darker than Death or Night",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Inquisition",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "In the Pale Moonlight",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "His Way",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "The Recoking",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Valiant",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "23",
+      "episodeOrder": 23,
+      "title": "Profit and Lace",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "24",
+      "episodeOrder": 24,
+      "title": "Times Orphan",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "25",
+      "episodeOrder": 25,
+      "title": "The Sound of Her Voice",
+      "disc": 7,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "26",
+      "episodeOrder": 26,
+      "title": "Tears of the Prophets",
+      "disc": 7,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Image in the Sand",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Shadows and Symbols",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Afterimage",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Take Me Out to the Holosuite",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Chrysalis",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Treachery Faith and the Great River",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Once More Unto the Breach",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "The Siege of AR-558",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Covenant",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Its Only a Paper Moon",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Prodigal Daughter",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "The Emperors New Cloak",
+      "disc": 3,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Field of Fire",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Chimera",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Badda-Bing Badda-Bang",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Inter Arma Enim Silent Leges",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Penumbra",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Til Dealth Do Us Part",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Strange Bedfellows",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "The Changing Face of Evil",
+      "disc": 5,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "When it Rains",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Tacking Into the Wind",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "23",
+      "episodeOrder": 23,
+      "title": "Extreme Measures",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "24",
+      "episodeOrder": 24,
+      "title": "The Dogs of War",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "25",
+      "episodeOrder": 25,
+      "title": "What You Leave Behind Part 1",
+      "disc": 7,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "26",
+      "episodeOrder": 26,
+      "title": "What You Leave Behind Part 2",
       "disc": 7,
       "vts": 2,
       "pgc": 2

@@ -40,7 +40,7 @@ export class Episode {
   async ensureWorkDir(): Promise<string> {
     const workDir = this.getWorkDir();
     if (!(await existsDirectory(workDir))) {
-      await mkdir(workDir, { recursive: false });
+      await mkdir(workDir, { recursive: true });
     }
     return workDir;
   }
@@ -70,6 +70,7 @@ export class Episode {
       chapters: baseFileName + ".chapters.txt",
       timecodeMetrics: baseFileName + ".timecodes.txt",
       deinterlacedAvi: `${baseFileName}.${this.profile.getDeintModel().name}.mkv`,
+      veaiImageDir: "veai-images",
     };
   }
   async getDgIndexFiles() {

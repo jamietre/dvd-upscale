@@ -4,6 +4,13 @@
       "season": 1,
       "disc": 1,
       "hashes": []
+    },
+    {
+      "season": 1,
+      "disc": 4,
+      "hashes": [
+        "4f408271e8061ed2136818c4d4ccff380ee550ec"
+      ]
     }
   ],
   "episodes": [
@@ -70,7 +77,6 @@
       "vts": 3,
       "pgc": 4
     },
-
     {
       "season": 1,
       "episodeNum": "09",
@@ -107,7 +113,6 @@
       "vts": 3,
       "pgc": 4
     },
-
     {
       "season": 1,
       "episodeNum": "13",
@@ -144,7 +149,6 @@
       "vts": 3,
       "pgc": 4
     },
-
     {
       "season": 2,
       "episodeNum": "01",
@@ -217,7 +221,6 @@
       "vts": 3,
       "pgc": 4
     },
-
     {
       "season": 2,
       "episodeNum": "09",
@@ -254,7 +257,6 @@
       "vts": 3,
       "pgc": 4
     },
-
     {
       "season": 2,
       "episodeNum": "13",

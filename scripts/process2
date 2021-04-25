@@ -11,7 +11,7 @@ cd "$DIR"
 #   ./dgindex "$1" "$2"
 #   ./deint "$1" "$2"
 # fi
-#./upscale "$1" "$2"
+./upscale "$1" "$2"
 ./encode-images "$1" "$2"
 ./timestamp "$1" "$2"
 

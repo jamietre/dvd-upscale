@@ -1,14 +1,9 @@
-import { Context } from "node:vm";
-import { getTestContext } from "../test/di";
+import { container } from "../test/di";
 import { FFMpeg } from "./ffmpeg";
 
 describe("ffmpeg", () => {
-  let context: Context;
-  beforeAll(() => {
-    context = getTestContext();
-  });
   it("multiple inputs", async () => {
-    const ff = new FFMpeg(context.config);
+    const ff = container.resolve(FFMpeg);
     const input1 = ff.createInput("input-file-1");
     const input2 = ff.createInput("input-file-2");
     ff.createOutput({

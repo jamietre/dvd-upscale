@@ -6,14 +6,12 @@ import { assertHasOneElement, assertIncludes } from "../util/assert";
 import { loadConfigFile } from "../util/node/config-file";
 import { assertIsDefined, UnknownObject } from "../util/types";
 import { Episode } from "./episode";
+import { AiModel, aiModels, ImageFormats, imageFormats } from "../tools/veai";
 
 const { readFile, writeFile } = promises;
 
 export const deintModelPresetNames = ["none", "ivtc5"] as const;
 export type DeintModelPreset = typeof deintModelPresetNames[number];
-
-export const upscaleModels = ["ghq-5", "amq-12", "amq-13"] as const;
-export type UpscaleModel = typeof upscaleModels[number];
 
 export const targetFramerates = ["30000/10001", "24000/1001"] as const;
 export type TargetFramerate = typeof targetFramerates[number];
@@ -21,14 +19,19 @@ export type TargetFramerate = typeof targetFramerates[number];
 export const aspectRatios = ["4:3", "16:9"] as const;
 export type AspectRatios = typeof aspectRatios[number];
 
-export const imageFormats = ["png", "tiff8", "tiff16"] as const;
-export type ImageFormats = typeof imageFormats[number];
-
 export type ProjectDiscProfile = {
   episodes: EpisodeData[];
   discs: DiscData[];
 };
 
+export type DiscMetadata = [
+  /**
+   * File on the DVD that is used for a hash. For some sets (like DS9) VTS_01_0.VOB is not unique.
+   * For others, this is one of the episodes, and would take a long time to hash. Try to find
+   * something that's small & un
+   */
+  hashFile: string
+];
 export type DiscData = {
   season: number;
   disc: number;
@@ -70,7 +73,7 @@ const deintModelPresets = {
 export type ProfileConfig = {
   deintModel: DeintModelPreset;
   deintModelSpec?: DeintModelSpec;
-  upscaleModel: UpscaleModel;
+  upscaleModel: AiModel;
   grainSize: number;
   grainAmount: number;
   projectDir: string;
@@ -205,7 +208,7 @@ export class Profile {
 function assertIsProfileConfig(obj: UnknownObject | ProfileConfig): asserts obj is ProfileConfig {
   const profile = obj as ProfileConfig;
   assertIncludes(deintModelPresetNames, profile.deintModel, "deinterlace model");
-  assertIncludes(upscaleModels, profile.upscaleModel, "upscale model");
+  assertIncludes(aiModels, profile.upscaleModel, "upscale model");
   assertIncludes(targetFramerates, profile.targetFramerate, "framerate");
   assertIncludes(aspectRatios, profile.aspectRatio, "aspect ratio");
   assertIncludes(imageFormats, profile.imageFormat, "image format");
