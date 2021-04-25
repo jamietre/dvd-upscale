@@ -1,4 +1,5 @@
 import { promises } from "fs";
+import { injectable } from "tsyringe";
 import { deleteFilesForPattern } from "../util/node/delete-files";
 
 import { TempDir } from "../util/node/tempdir";
@@ -13,6 +14,7 @@ export type AvisScriptOptions = {
   timecodeFileName: string;
 };
 
+@injectable()
 export class AviSynth {
   constructor(private ffmpeg: FFMpeg) {}
   async run(runOptions: {

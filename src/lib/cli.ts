@@ -7,6 +7,7 @@ import { loadProfile, Profile } from "./profile";
 import { CommandRunner } from "../util/node/command-runner";
 import { FFMpeg } from "../tools/ffmpeg";
 import { Logger } from "./logger/logger";
+import { AviSynth } from "../tools/avisynth";
 
 export type CliCallback = (episode: Episode) => Promise<void>;
 
@@ -54,7 +55,9 @@ export async function registerEnvironment(profileName: string) {
   container.register(Config, { useValue: config });
   container.register(Context, { useValue: context });
   container.register(CommandRunner, { useClass: CommandRunner });
+  container.register(Profile, { useValue: profile });
   container.register(FFMpeg, { useClass: FFMpeg });
+  container.register(AviSynth, { useClass: AviSynth });
 }
 
 export function startCli(callback: CliCallback) {

@@ -2,7 +2,7 @@ import appRootPath from "app-root-path";
 import { promises } from "fs";
 import path from "path";
 
-import { assertIncludes } from "../util/assert";
+import { assertHasOneElement, assertIncludes } from "../util/assert";
 import { loadConfigFile } from "../util/node/config-file";
 import { assertIsDefined, UnknownObject } from "../util/types";
 import { Episode } from "./episode";
@@ -103,7 +103,21 @@ export class Profile {
       discProfile: ProjectDiscProfile;
       discProfilePath: string;
     }
-  ) {}
+  ) {
+    const allHashes = options.discProfile.discs.map(e => e.hashes).flat();
+    const allUniqueHashes = new Set(allHashes);
+    if (allHashes.length !== allUniqueHashes.size) {
+      const dups: string[] = [];
+      allHashes.forEach(hash => {
+        if (allUniqueHashes.has(hash)) {
+          allUniqueHashes.delete(hash);
+          return;
+        }
+        dups.push(hash);
+      });
+      throw new Error(`The disc hashes are not unique: ${dups.join(",")}`);
+    }
+  }
   getEpisode({ season, episodeNum }: Pick<EpisodeData, "season" | "episodeNum">): Episode {
     const episodeArr = this.episodes.filter(
       e => e.season === season && e.episodeNum === episodeNum
@@ -126,9 +140,20 @@ export class Profile {
   }
   getDiscProfile(season: number, disc: number): DiscData {
     const discData = this.discs.filter(e => e.season === season && e.disc === disc);
-    if (discData.length !== 1) {
-      throw new Error(`Couldn't find season ${season}, disc ${disc}`);
+    if (discData.length === 0) {
+      const discData = {
+        season,
+        disc,
+        hashes: [],
+      };
+      this.discs.push(discData);
+      return discData;
     }
+    assertHasOneElement(
+      discData,
+      `There were multiple matches for ${season}, disc ${disc}; check your config data.`
+    );
+
     return discData[0];
   }
   getDiscForHash(hash: string): { season: number; disc: number } | undefined {
@@ -141,6 +166,16 @@ export class Profile {
     }
     const match = matches[0];
     return { disc: match.disc, season: match.season };
+  }
+  addDiscHash(season: number, disc: number, hash: string) {
+    const existing = this.getDiscForHash(hash);
+    if (existing) {
+      return;
+    }
+    const discProfile = this.getDiscProfile(season, disc);
+    const hashes = new Set(discProfile.hashes);
+    hashes.add(hash);
+    discProfile.hashes = Array.from(hashes);
   }
   getDeintModel(): DeintModelSpec {
     const { config } = this;

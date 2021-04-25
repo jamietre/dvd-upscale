@@ -3,7 +3,37 @@
     {
       "season": 1,
       "disc": 1,
-      "hashes": ["648c8f8f626ccc0a9c2a0dc7818a0e937252f391"]
+      "hashes": [
+        "02c84faf49c3e7b3130d1d709ba192c4def85e6b"
+      ]
+    },
+    {
+      "disc": 2,
+      "season": 1,
+      "hashes": [
+        "00f0fed91b8d07fee69dbff057e7dc79571a5cee"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 3,
+      "hashes": [
+        "050810ad5c29abdc15b3dc4a7e8d9e78b02983e5"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 4,
+      "hashes": [
+        "772a357adc28cba552ae701fc79881fddbbd2ee5"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 5,
+      "hashes": [
+        "6c8ebf76734ae97fd6176d68cd31fc5edece5735"
+      ]
     }
   ],
   "episodes": [

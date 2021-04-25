@@ -17,3 +17,8 @@ export async function existsDirectory(fname: string): Promise<boolean> {
     return false;
   }
 }
+
+export function parseDrive(drive: string): string {
+  const driveUpper = drive.toUpperCase();
+  return `${driveUpper.slice(0, 1)}:/`;
+}

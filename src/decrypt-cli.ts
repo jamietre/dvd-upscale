@@ -1,5 +1,3 @@
-import crypto from "crypto";
-import { createReadStream } from "fs";
 import { ArgumentParser } from "argparse";
 import { container } from "./util/di";
 import { registerEnvironment } from "./lib/cli";
@@ -10,6 +8,8 @@ import { decryptDvd } from "./tools/decrypt";
 import { Profile } from "./lib/profile";
 import { Logger } from "./lib/logger/logger";
 import { assertIsDefined } from "./util/types";
+import { DiscIdentifier } from "./util/node/disc-id";
+import { parseDrive } from "./util/node/fs-helpers";
 
 export type CliCallback = (options: CliOptions) => Promise<void>;
 
@@ -19,6 +19,7 @@ type CliOptions = {
   season?: number;
   disc?: number;
   update?: boolean;
+  dryRun?: boolean;
 };
 
 type DiscId = {
@@ -58,6 +59,12 @@ async function main(callback: CliCallback): Promise<void> {
     help: "Update disc signature info",
     required: false,
   });
+  parser.add_argument("-dry-run", "-dr", {
+    dest: "dryRun",
+    action: "store_true",
+    help: "Do not rip discs, but will update hash if requested",
+    required: false,
+  });
 
   const [args, _extra] = parser.parse_known_args(process.argv) as [CliOptions, unknown];
 
@@ -72,6 +79,11 @@ async function decryptDvdCallback(options: CliOptions): Promise<void> {
   const driveLetter = parseDrive(options.driveLetter);
 
   logger.info(`Decrypting drive ${driveLetter} to "${profile.config.projectDir}"`);
+
+  if (options.dryRun) {
+    logger.info("-dry-run specified; exiting.");
+    return;
+  }
 
   await decryptDvd({
     context,
@@ -91,7 +103,8 @@ async function getDiscAndSeason(
 ): Promise<{ disc: number; season: number }> {
   const logger = container.resolve(Logger);
   logger.info("Reading disc info...");
-  const hash = await getDiscHash(options.driveLetter);
+  const discId = new DiscIdentifier();
+  const hash = await discId.getDdvdHash(options.driveLetter);
   assertIsDefined(hash, "No hash could be obtained");
   const discInfo = await profile.getDiscForHash(hash);
 
@@ -106,18 +119,16 @@ async function getDiscAndSeason(
     }
     logger.info(`Identified Season ${discInfo.season}, Disc ${discInfo.disc}`);
     return {
-      disc: discInfo.disc,
       season: discInfo.season,
+      disc: discInfo.disc,
     };
   }
   if (options.update) {
     if (!isDiscId(options)) {
       throw new Error(`You asked to update the hash, but season & disc were not provided.`);
     }
-    const discInfo = profile.getDiscProfile(options.season, options.disc);
-    const hashes = new Set(discInfo.hashes);
-    hashes.add(hash);
-    discInfo.hashes = Array.from(hashes);
+    profile.addDiscHash(options.season, options.disc, hash);
+
     await profile.saveDiscProfile();
   }
 
@@ -132,40 +143,6 @@ async function getDiscAndSeason(
     season: options.season,
   };
 }
-
-async function getDiscHash(drive: string): Promise<string> {
-  const videoFile = `${parseDrive(drive)}VIDEO_TS/VIDEO_TS.IFO`;
-  const hash = await getFileHash(videoFile);
-  return hash;
-}
-
-async function getFileHash(filePath: string): Promise<string> {
-  return new Promise(resolve => {
-    // the file you want to get the hash
-    const fd = createReadStream(filePath);
-    const hash = crypto.createHash("sha1");
-    hash.setEncoding("hex");
-    hash.on("finish", () => resolve(hash.read()));
-    fd.pipe(hash);
-  });
-}
-
-function parseDrive(drive: string): string {
-  const driveUpper = drive.toUpperCase();
-  return `${driveUpper.slice(0, 1)}:/`;
-}
-// async function decryptSeason(context: Context, options: CliOptions): Promise<void> {
-//   const seasons = context.profile.episodes.sort((a, b) => {
-//     if (a.disc !== b.disc) {
-//       return a.disc < b.disc ? -1 : 1;
-//     }
-//     return a.episodeOrder < b.episodeOrder ? -1 : b.episodeOrder < a.episodeOrder ? 1 : 0;
-//   });
-
-//   prompt.message = "";
-//   prompt.start();
-//   await prompt.get([]);
-// }
 
 main(decryptDvdCallback).catch(e => {
   console.error(e);

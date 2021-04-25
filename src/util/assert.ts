@@ -44,3 +44,9 @@ export async function assertDirectoryExists(fname: string): Promise<void> {
     throw new Error(`"${fname}" is a file.`);
   }
 }
+
+export function assertHasOneElement<T>(arr?: T[], message?: string): asserts arr is [T] {
+  if (!arr || arr.length !== 1) {
+    throw new Error(message ?? "The array must have exactly one element.");
+  }
+}
