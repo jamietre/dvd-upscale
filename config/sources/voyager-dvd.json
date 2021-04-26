@@ -8,9 +8,7 @@
     {
       "season": 1,
       "disc": 4,
-      "hashes": [
-        "4f408271e8061ed2136818c4d4ccff380ee550ec"
-      ]
+      "hashes": ["4f408271e8061ed2136818c4d4ccff380ee550ec"]
     }
   ],
   "episodes": [
@@ -388,7 +386,7 @@
       "episodeNum": "01",
       "episodeOrder": 1,
       "title": "Basics Part 2",
-      "disc":1 ,
+      "disc": 1,
       "vts": 2,
       "pgc": 1
     },
@@ -1552,16 +1550,6 @@
       "disc": 7,
       "vts": 2,
       "pgc": 2
-    },
-    {
-      "season": 7,
-      "episodeNum": "",
-      "episodeOrder": ,
-      "title": "",
-      "disc": ,
-      "vts": 2,
-      "pgc": 
     }
-    
   ]
 }

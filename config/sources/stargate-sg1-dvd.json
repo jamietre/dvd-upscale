@@ -1,0 +1,1922 @@
+{
+  "discs": [],
+  "episodes": [
+    {
+      "season": 1,
+      "episodeNum": "0102",
+      "episodeOrder": 1,
+      "title": "Children of the Gods",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "03",
+      "episodeOrder": 2,
+      "title": "The Enemy Within",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "04",
+      "episodeOrder": 3,
+      "title": "Emancipation",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "05",
+      "episodeOrder": 4,
+      "title": "The Broca Divide",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "06",
+      "episodeOrder": 5,
+      "title": "The First Commandment",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "07",
+      "episodeOrder": 6,
+      "title": "Cold Lazarus",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "08",
+      "episodeOrder": 7,
+      "title": "The Nox",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 1,
+      "episodeNum": "09",
+      "episodeOrder": 8,
+      "title": "Brief Candle",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "10",
+      "episodeOrder": 9,
+      "title": "Thors Hammer",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "11",
+      "episodeOrder": 10,
+      "title": "The Torment of Tantalus",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "12",
+      "episodeOrder": 11,
+      "title": "Bloodlines",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 1,
+      "episodeNum": "13",
+      "episodeOrder": 12,
+      "title": "Fire and Water",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "14",
+      "episodeOrder": 13,
+      "title": "Hathor",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "15",
+      "episodeOrder": 14,
+      "title": "Singularity",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "16",
+      "episodeOrder": 15,
+      "title": "Cor-Ai",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 1,
+      "episodeNum": "17",
+      "episodeOrder": 16,
+      "title": "Enigma",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "18",
+      "episodeOrder": 17,
+      "title": "Solitudes",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "19",
+      "episodeOrder": 18,
+      "title": "Tin Man",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "20",
+      "episodeOrder": 19,
+      "title": "There But For the Grace of God",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 1,
+      "episodeNum": "21",
+      "episodeOrder": 20,
+      "title": "Politics",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "22",
+      "episodeOrder": 21,
+      "title": "Within the Serpents Grasp",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "The Serpents Lair",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "In the Line of Duty",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Prisoners",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "The Gamekeeper",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Need",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Thors Chariot",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Message in a Bottle",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Family",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Secrets",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Bane",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "The Tokra Part 1",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "The Tokra Part 2",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Spirits",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Touchstone",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "The Fifth Race",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "A Matter of Time",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Holiday",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Serpents Song",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "One False Step",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Show and Tell",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "1969",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Out of Mind",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Into the Fire",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Seth",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Fair Game",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Legacy",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 3,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Learning Curve",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Point of View",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Deadman Switch",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Demons",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 3,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Rules of Engagement",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Forever in a Day",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Past and Present",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Jolinars Memories",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 3,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "The Devil You Know",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Foothold",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Pretense",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Urgo",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 3,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "A Hundred Days",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Shades of Grey",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "New Ground",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Maternal Instinct",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Crystal Skull",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Nemesis",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Small Victories",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "The Other Side",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Upgrades",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 4,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Crossroads",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 4,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Divide and Conquer",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Window of Opportunity",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Watergate",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 4,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "The First Ones",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 4,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Scorched Earth",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Beneath the Surface",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Point of No Return",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 4,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Tangent",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 4,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "The Curse",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "The Serpents Venom",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Chain Reaction",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 4,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "2010",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 4,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Absolute Power",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "The Light",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Prodigy",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 4,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Entity",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 4,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Double Jeopardy",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Exodus",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Enemies",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Threshold",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Ascension",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "The Fifth Man",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Red Sky",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Rite of Passage",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Beast of Burden",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "The Tomb",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Between Two Fires",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "2001",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Desperate Measures",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Wormhole X-Treme",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Proving Ground",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "48 Hours",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Summit",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Last Stand",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Fail Safe",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "The Warrior",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 5,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Menace",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 5,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "The Sentinel",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 5,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Meridian",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 5,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Revelations",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Redepmtion Part 1",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Redemption Part 2",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Descent",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Frozen",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Nightwalkers",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Abyss",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Shadow Sky",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "The Other Guys",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Allegiance",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Cure",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Prometheus",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Unnatural Selection",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Sight Unseen",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Smoke and Mirrors",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Paradise Lost",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Metamorphosis",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Disclosure",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Forsaken",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 6,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "The Changeling",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 6,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Memento",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 6,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Prophecy",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 6,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Full Circle",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Fallen",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Homecoming",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Fragile Balance",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Orpheus",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Revisions",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Lifeboat",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Enemy Mine",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Space Race",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Avenger 2-0",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Birthright",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Evolution Part 1",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Evolution Part 2",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Grace",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Fallout",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Chimera",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Death Knell",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Heroes Part 1",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Heroes Part 2",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 7,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Resurrection",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 7,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Inauguration",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 7,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Lost City Part 1",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 7,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Lost City Part 2",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 8,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "New Order Part 1",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 8,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "New Order Part 2",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 8,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Lockdown",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 8,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Zero Hour",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 8,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Icon",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 8,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Avatar",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 8,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Affinity",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 8,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Covenant",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 8,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Sacrifices",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 8,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Endgame",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 8,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Gemini",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 8,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Prometheus Unbound",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 8,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Its Good To Be King",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 8,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Full Alert",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 8,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Citizen Joe",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 8,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Reckoning Part 1",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 8,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Reckoning Part 2",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 8,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Threads",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 8,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Moebius Part 1",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 8,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Moebius Part 2",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 9,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Avalon Part 1",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 9,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Avalon Part 2",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 9,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Origin",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 9,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "The Ties That Bind",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 9,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "The Powers That Be",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 9,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Beachhead",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 9,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Ex Deus Machina",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 9,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Babylon",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 9,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Prototype",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 9,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "The Fourth Horseman Part 1",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 9,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "The Fourth Horseman Part 2",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 9,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Collateral Damage",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 9,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Ripple Effect",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 9,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Stronghold",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 9,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Ethon",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 9,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Off the Grid",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 9,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "The Scourge",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 9,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Arthurs Mantle",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 9,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Crusade",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 9,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Camelot",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 10,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Flesh and Blood",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 10,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Morpheus",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 10,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "The Pegasus Project",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 10,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Insiders",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 10,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Uninvited",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 10,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "200",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 10,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Counterstrike",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 10,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Memento Mori",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 10,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Company of Thieves",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 10,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Quest Part 1",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 10,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Quest Part 2",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 10,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Line in the Sand",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 10,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "The Road Not Taken",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 10,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "The Shroud",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 10,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Bounty",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 10,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Bad Guys",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 10,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Talion",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 10,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Family Ties",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 10,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Dominion",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 10,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Unending",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    }
+  ]
+}
