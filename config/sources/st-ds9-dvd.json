@@ -188,6 +188,41 @@
       "hashes": [
         "f5165e2375c102dbc982347e6ff13aafbb9e0bb2"
       ]
+    },
+    {
+      "season": 5,
+      "disc": 1,
+      "hashes": [
+        "9a5fc0156bfc175e89789a08005de5a489f78741"
+      ]
+    },
+    {
+      "season": 5,
+      "disc": 2,
+      "hashes": [
+        "19123224c4f0ddc898b4a60c42f31d96458cc152"
+      ]
+    },
+    {
+      "season": 5,
+      "disc": 3,
+      "hashes": [
+        "9ea3fa9940524e70f707f3650a3d0697f3eb2176"
+      ]
+    },
+    {
+      "season": 5,
+      "disc": 4,
+      "hashes": [
+        "ba16ecf3a0bb30f90c29f78b9a709210fd4dbcd8"
+      ]
+    },
+    {
+      "season": 5,
+      "disc": 5,
+      "hashes": [
+        "43e91d621b2930fa4a874406272da1ed4d6cccc7"
+      ]
     }
   ],
   "episodes": [

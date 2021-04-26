@@ -1,0 +1,387 @@
+{
+  "info": {
+    "name": "Dark Angel",
+    "source": "German DVD 16x9 progressive PAL"
+  },
+  "discs": [],
+  "episodes": [
+    {
+      "season": 1,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Pilot",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Heat",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Flushed",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "C-R-E-A-M",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "411 on the DL",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Prodigy",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Cold Comfort",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 1,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Blah Blah Woof Woof",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Out",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Red",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Art Attack",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Rising",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "The Kidz are Aiight",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Female Trouble",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 1,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Haven",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Shorties in Love",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Pollo Loco",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "I and I am a Camera",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 1,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Hit a Sista Back",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Meow",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "And Jesus Brough a Casserole",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Designate This",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Bag Em",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Proof of Purchase",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Radar Love",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Boo",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Two",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Some Assembly Required",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Gill Girl",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Medium is the Message",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Brainiac",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "The Berrisford Agenda",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Borrowed Time",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Harbor Lights",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "Love in Vein",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Fuhgeddaboudit",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Exposure",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Hello Goodbye",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Dawg Day Afternoon",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "She Aint Heavy",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 2,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Love Among Runes",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Freak Nation",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    }
+  ]
+}

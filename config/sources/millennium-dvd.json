@@ -1,0 +1,626 @@
+{
+  "info": {
+    "name": "Millennium",
+    "source": "US NTSC DVD",
+    "seasons": [
+      {
+        "season": 1,
+        "aspectRatio": "4:3"
+      },
+      {
+        "season": 2,
+        "aspectRatio": "16:9"
+      },
+      {
+        "season": 3,
+        "aspectRatio": "16:9"
+      }
+    ]
+  },
+  "discs": [],
+  "episodes": [
+    {
+      "season": 1,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "Pilot",
+      "disc": 1,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Gehenna",
+      "disc": 1,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Dead Letters",
+      "disc": 1,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "The Judge",
+      "disc": 1,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "522666",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Kingdom Come",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Blood Relatives",
+      "disc": 2,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "The Well-Worn Clock",
+      "disc": 2,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Wide Open",
+      "disc": 3,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "The Wild and the Innocent",
+      "disc": 3,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Weeds",
+      "disc": 3,
+      "vts": 6,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Loin Like a Hunting Flame",
+      "disc": 3,
+      "vts": 7,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Force Majeure",
+      "disc": 4,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "The Thin White Line",
+      "disc": 4,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Sacrament",
+      "disc": 4,
+      "vts": 6,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Covenant",
+      "disc": 4,
+      "vts": 7,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Walkabout",
+      "disc": 5,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Lamentation",
+      "disc": 5,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Powers, Principalities, Thrones and Dominions",
+      "disc": 5,
+      "vts": 6,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Broken World",
+      "disc": 5,
+      "vts": 7,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Maranatha",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Paper Dove",
+      "disc": 6,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "The Beginning and the End",
+      "disc": 1,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Beware of the Dog",
+      "disc": 1,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "Sense and Antisense",
+      "disc": 1,
+      "vts": 6,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Monster",
+      "disc": 1,
+      "vts": 7,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "A Single Blade of Grass",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "The Curse of Frank Black",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "19-19",
+      "disc": 2,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "The Hand of Saint Sebastian",
+      "disc": 2,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Jose Chungs Doomsday Defense",
+      "disc": 3,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Midnight of the Century",
+      "disc": 3,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Goodbye Charlie",
+      "disc": 3,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "Luminary",
+      "disc": 3,
+      "vts": 6,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "The Mikado",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "The Pest House",
+      "disc": 4,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Owls",
+      "disc": 4,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Roosters",
+      "disc": 4,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Siren",
+      "disc": 5,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "In Arcadia Ego",
+      "disc": 5,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Anamnesis",
+      "disc": 5,
+      "vts": 6,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "A Room with No View",
+      "disc": 5,
+      "vts": 7,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Somehow, Satan Got Behind Me",
+      "disc": 6,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "The Fourth Horseman",
+      "disc": 6,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "23",
+      "episodeOrder": 23,
+      "title": "The Time is Now",
+      "disc": 6,
+      "vts": 6,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "The Innocents",
+      "disc": 1,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "Exegesis",
+      "disc": 1,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "TEOTWAWKI",
+      "disc": 1,
+      "vts": 6,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "Closure",
+      "disc": 1,
+      "vts": 7,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "Thirteen Years Later",
+      "disc": 2,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "Skull and Bones",
+      "disc": 2,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "Through a Glass Darkly",
+      "disc": 2,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "Human Essence",
+      "disc": 2,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "Omerta",
+      "disc": 3,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "Borrowed Time",
+      "disc": 3,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "Collateral Damage",
+      "disc": 3,
+      "vts": 6,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "The Sound of Snow",
+      "disc": 3,
+      "vts": 7,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "Antipas",
+      "disc": 4,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "atryoshka",
+      "disc": 4,
+      "vts": 3,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Forcing the End",
+      "disc": 4,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "Saturn Dreaming of Mercury",
+      "disc": 4,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "Darwin's Eye",
+      "disc": 5,
+      "vts": 4,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Bardo Thodol",
+      "disc": 5,
+      "vts": 5,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "Seven and One",
+      "disc": 5,
+      "vts": 6,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "Nostalgia",
+      "disc": 5,
+      "vts": 7,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "Via Dolorosa",
+      "disc": 6,
+      "vts": 2,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "Goodbye to All That",
+      "disc": 6,
+      "vts": 3,
+      "pgc": 1
+    }
+  ]
+}
