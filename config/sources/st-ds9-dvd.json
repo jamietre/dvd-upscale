@@ -97,6 +97,48 @@
       "hashes": [
         "c0e3f60a20f20ab0681dbdfb30dd27ec98d27c5b"
       ]
+    },
+    {
+      "season": 3,
+      "disc": 2,
+      "hashes": [
+        "2ab5750a74f537b6e3010ce667f3fc18b567e325"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 3,
+      "hashes": [
+        "8d77273d0005405776b0874386718fe44eb610f0"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 4,
+      "hashes": [
+        "90033f39b72ad5e8fde44f129833996ddfe0044c"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 5,
+      "hashes": [
+        "2a19b43c3f826f94cb5c9900ce2a65c6cdd2b109"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 6,
+      "hashes": [
+        "6ab5f2af165e0328878814bcaef1e8116d8c919d"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 7,
+      "hashes": [
+        "eda80f79acc9d6e57e8d73270c7cd8cb6842e609"
+      ]
     }
   ],
   "episodes": [

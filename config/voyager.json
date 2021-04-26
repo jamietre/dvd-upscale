@@ -1,6 +1,6 @@
 {
   "deintModel": "ivtc5",
-  "upscaleModel": "amq-12",
+  "upscaleModel": "amq-13",
   "grainSize": 0.5,
   "grainAmount": 1.6,
   "projectDir": "j:/VideoIncoming/Star Trek Voyager",
