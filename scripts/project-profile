@@ -16,7 +16,8 @@ function convert_path() {
 }
 
 dgindex="${windrive}/data/apps/dgmpgdec2005/DGIndex.exe"
-ffmpeg="$windrive/ProgramData/chocolatey/bin/ffmpeg.exe"
+#ffmpeg="$windrive/ProgramData/chocolatey/bin/ffmpeg.exe"
+ffmpeg="$windrive/data/apps/ffmpeg.exe"
 mkvmerge="${windrive}/Program Files/MKVToolNix/mkvmerge.exe"
 #veai="${windrive}/Program Files/Topaz Labs LLC/Topaz Video Enhance AI (BETA)/veai.exe"
 veai="${windrive}/Program Files/Topaz Labs LLC/Topaz Video Enhance AI/veai.exe"

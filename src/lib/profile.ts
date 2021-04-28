@@ -91,35 +91,26 @@ export type ProfileConfig = {
 };
 
 export class Profile {
+  private discProfile: ProjectDiscProfile;
   get config(): ProfileConfig {
     return this.options.config;
   }
   get episodes(): EpisodeData[] {
-    return this.options.discProfile.episodes;
+    return this.discProfile.episodes;
   }
   get discs(): DiscData[] {
-    return this.options.discProfile.discs;
+    return this.discProfile.discs;
   }
   constructor(
     private options: {
       config: ProfileConfig;
-      discProfile: ProjectDiscProfile;
       discProfilePath: string;
     }
   ) {
-    const allHashes = options.discProfile.discs.map(e => e.hashes).flat();
-    const allUniqueHashes = new Set(allHashes);
-    if (allHashes.length !== allUniqueHashes.size) {
-      const dups: string[] = [];
-      allHashes.forEach(hash => {
-        if (allUniqueHashes.has(hash)) {
-          allUniqueHashes.delete(hash);
-          return;
-        }
-        dups.push(hash);
-      });
-      throw new Error(`The disc hashes are not unique: ${dups.join(",")}`);
-    }
+    this.discProfile = {
+      discs: [],
+      episodes: [],
+    };
   }
   getEpisode({ season, episodeNum }: Pick<EpisodeData, "season" | "episodeNum">): Episode {
     const episodeArr = this.episodes.filter(
@@ -189,11 +180,32 @@ export class Profile {
     }
     return deintModelPresets[preset];
   }
+  async loadDiscProfile(): Promise<void> {
+    const { discProfilePath } = this.options;
+    const episodesJson = await readFile(discProfilePath, "utf-8");
+    // TODO: need to merge changes
+    const discProfile = JSON.parse(episodesJson) as ProjectDiscProfile;
+    const allHashes = discProfile.discs.map(e => e.hashes).flat();
+    const allUniqueHashes = new Set(allHashes);
+    if (allHashes.length !== allUniqueHashes.size) {
+      const dups: string[] = [];
+      allHashes.forEach(hash => {
+        if (allUniqueHashes.has(hash)) {
+          allUniqueHashes.delete(hash);
+          return;
+        }
+        dups.push(hash);
+      });
+      throw new Error(`The disc hashes are not unique: ${dups.join(",")}`);
+    }
+    this.discProfile = discProfile;
+  }
+
   async saveDiscProfile(): Promise<void> {
     const { discProfilePath } = this.options;
     const data: ProjectDiscProfile = {
-      discs: this.discs,
-      episodes: this.episodes,
+      discs: this.discs.sort(discDataComparer),
+      episodes: this.episodes.sort(episodeDataComparer),
     };
     await writeFile(discProfilePath, JSON.stringify(data, null, 2), "utf-8");
   }
@@ -214,18 +226,28 @@ function assertIsProfileConfig(obj: UnknownObject | ProfileConfig): asserts obj 
   assertIncludes(imageFormats, profile.imageFormat, "image format");
 }
 
+function discDataComparer(a: DiscData, b: DiscData): number {
+  return numberComparer(a.season, b.season) || numberComparer(a.disc, b.disc);
+}
+function episodeDataComparer(a: EpisodeData, b: EpisodeData): number {
+  return numberComparer(a.season, b.season) || numberComparer(a.episodeOrder, b.episodeOrder);
+}
+
+function numberComparer(a: number, b: number): number {
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
 export async function loadProfile(profileName: string): Promise<Profile> {
   const config = (await loadConfigFile(profileName)) as any;
 
-  let sourcePath = (config as any).seasonsSource;
+  let sourcePath: string = (config as any).seasonsSource;
   if (!path.isAbsolute(sourcePath)) {
     sourcePath = appRootPath.resolve(`config/${sourcePath}`);
   }
-  const episodesJson = await readFile(sourcePath, "utf-8");
-  const discProfile = JSON.parse(episodesJson) as ProjectDiscProfile;
 
   assertIsProfileConfig(config);
 
-  const profile = new Profile({ config, discProfile, discProfilePath: sourcePath });
+  const profile = new Profile({ config, discProfilePath: sourcePath });
+  await profile.loadDiscProfile();
   return profile;
 }

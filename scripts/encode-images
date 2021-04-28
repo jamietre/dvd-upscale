@@ -17,7 +17,7 @@ last_frame_images=`"${DIR}/last-file" $1 $2`
 
 # audio is merged from original source file
 
-ffmpeg -thread_queue_size 512 \
+"$ffmpeg" -thread_queue_size 512 \
  -framerate "$target_framerate" \
  -i "$image_dir/%06d.png" \
   -thread_queue_size 512 \
