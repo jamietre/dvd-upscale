@@ -10,7 +10,7 @@ import { AiModel, aiModels, ImageFormats, imageFormats } from "../tools/veai";
 
 const { readFile, writeFile } = promises;
 
-export const deintModelPresetNames = ["none", "ivtc5"] as const;
+export const deintModelPresetNames = ["none", "ivtc3", "ivtc5"] as const;
 export type DeintModelPreset = typeof deintModelPresetNames[number];
 
 export const targetFramerates = ["30000/10001", "24000/1001"] as const;
@@ -58,12 +58,23 @@ export type DeintModelSpec = {
   scripts: AvisynthScript[];
 };
 
+export type TargetCodec = "h265";
+
 const deintModelPresets = {
   ivtc5: {
     name: "ivtc5",
     scripts: [
       {
         scriptPath: "<configDir>/avisynth/ivtc5.avs",
+        passes: 2,
+      },
+    ],
+  },
+  ivtc3: {
+    name: "ivtc3",
+    scripts: [
+      {
+        scriptPath: "<configDir>/avisynth/ivtc3.avs",
         passes: 2,
       },
     ],
@@ -88,6 +99,7 @@ export type ProfileConfig = {
    * a glob?
    */
   episodeRootName: string;
+  targetCodec: TargetCodec;
 };
 
 export class Profile {

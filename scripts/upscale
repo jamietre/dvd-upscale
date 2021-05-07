@@ -10,7 +10,6 @@ start_frame="0"
 
 if [[ -d "$output" ]]; then
   echo "Getting last file..."
-  
   start_frame=`"${DIR}/last-file" "$1" "$2"`
   echo "Start frame: ${start_frame}"
 fi
@@ -35,7 +34,7 @@ set -x
 "$veai" --input "$input" --output "$output" \
   --output-format "$file_type" \
   --begin-frame "$start_frame" \
-  --width:height "1920:1080" \
+  --width:height "1440:1080" \
   -m "${model_name}" \
   --grain-size ${grain_size} \
   --grain-amount ${grain_amount} \

@@ -46,7 +46,7 @@ fi
 . "$profile_file"
 
 case "$file_type" in
-  8tif|16tif)
+  8tif|16tif|mov_prores|jpg)
     file_ext="tif"
     ;;
   png)

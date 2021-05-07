@@ -23,8 +23,8 @@ last_frame_images=`"${DIR}/last-file" $1 $2`
   -thread_queue_size 512 \
  -i "$source_file" \
   -max_interleave_delta 0 \
- -vf format=yuv420p10le \
- -map 0:v:0 \
+  -map 0:v:0 \
+  -vf "format=yuv420p10le" \
  -c:v libx265 \
  -crf 20 \
  -profile:v main10 \
@@ -41,6 +41,7 @@ last_frame_images=`"${DIR}/last-file" $1 $2`
  "$out"
 echo "Finished encoding ${out}"
 
+#scale=iw*sar:ih,setsar=1,pad=ih*16/9:ih:(ow-iw)/2:0,
 
 # original - before vfr
 # ffmpeg -thread_queue_size 512 \  

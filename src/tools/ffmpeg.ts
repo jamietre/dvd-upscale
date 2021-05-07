@@ -212,7 +212,7 @@ export class FFMpeg {
     args.push("-loglevel", "quiet", "-stats");
 
     await this.commandRunner.run(config.ffmpeg, args, {
-      logReader: this.logReader,
+      logReader: message => process.stdout.write(message),
     });
   }
 
@@ -229,9 +229,6 @@ export class FFMpeg {
     }
   }
 
-  private logReader = (message: string) => {
-    process.stdout.write(message);
-  };
   // private validateOptions() {
   //   this.outputStreams.forEach((stream, index) => {
   //     if (

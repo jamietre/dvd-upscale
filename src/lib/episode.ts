@@ -63,14 +63,19 @@ export class Episode {
   }
 
   getFileNames() {
+    const { profile } = this;
     const baseFileName = this.getBaseFileName();
     return {
       vob: baseFileName + ".VOB",
       ifo: baseFileName + ".IFO",
       chapters: baseFileName + ".chapters.txt",
       timecodeMetrics: baseFileName + ".timecodes.txt",
-      deinterlacedAvi: `${baseFileName}.${this.profile.getDeintModel().name}.mkv`,
+      deinterlacedAvi: `${baseFileName}.${profile.getDeintModel().name}.mkv`,
       veaiImageDir: "veai-images",
+      /**
+       * This is the output from FFMPEG, before the timecodes have been merged
+       */
+      rawEncodedFile: `${baseFileName}.${profile.config.deintModel}.${profile.config.targetCodec}.no-timecodes.mkv`,
     };
   }
   async getDgIndexFiles() {

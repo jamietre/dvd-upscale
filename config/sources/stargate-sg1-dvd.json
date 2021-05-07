@@ -1,5 +1,251 @@
 {
-  "discs": [],
+  "discs": [
+    {
+      "season": 1,
+      "disc": 1,
+      "hashes": [
+        "633315c2dc2269e60595eea547ab9ff5c7154eac"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 2,
+      "hashes": [
+        "5fa7a985ff1ada3f48e5ebedf394a8114524628d"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 3,
+      "hashes": [
+        "b084d5a53f6670cf8da33aaea62dffd59ae8e92f"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 4,
+      "hashes": [
+        "46617af4b434536f242a38fd495d3b61c8e6e459"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 5,
+      "hashes": [
+        "a10fc12d828bf489232bdd24271c65180b1baa95"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 1,
+      "hashes": [
+        "e8ec9811292f6887b980f855007253071aa19708"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 2,
+      "hashes": [
+        "7fed5b9a921aa262028a5b8f2bd6b34b9e82e39b"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 3,
+      "hashes": [
+        "557926d6ed64b7220d4c5d9afd9a0e18277d5c22"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 4,
+      "hashes": [
+        "4813db73654a9486b0f431173189a0f7d7c59cf0"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 5,
+      "hashes": [
+        "ac0205b92b55f89f5ffad65798f97d9b8326e0a5"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 1,
+      "hashes": [
+        "bd2c0c984e7600ed8a7e847f2815857652214d06"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 2,
+      "hashes": [
+        "305a88a15946852c4f2c03a19666ca68cf178173"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 3,
+      "hashes": [
+        "43c4b0bf537508a7b9d84da3eefd53062b00d9b2"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 4,
+      "hashes": [
+        "b1c34c452187f5dfa71a6ac4b8bb7ccbd9054b8f"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 5,
+      "hashes": [
+        "770d68b4e053e779deff694af7622bcbe3b2afe4"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 1,
+      "hashes": [
+        "38441d2e21781a7d641d2147ebb7b1a2943e0de4"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 2,
+      "hashes": [
+        "2ecb7ecd0a4c4007af30f7d0705e59db50daf30c"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 3,
+      "hashes": [
+        "276b3d8458c889afd456bbb873b81999981fab70"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 4,
+      "hashes": [
+        "4d55bfe33957563c79034b74e021246799955ac2"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 5,
+      "hashes": [
+        "44296e6d97bd26e738abea9a3162ef65066b3e93"
+      ]
+    },
+    {
+      "season": 5,
+      "disc": 1,
+      "hashes": [
+        "86436a1837ee711ca6fc3515bb05ad47b29b3e28"
+      ]
+    },
+    {
+      "season": 5,
+      "disc": 2,
+      "hashes": [
+        "9648000a77f4e5279fcfd125f6a607f293fcc770"
+      ]
+    },
+    {
+      "season": 5,
+      "disc": 3,
+      "hashes": [
+        "a020d40e386c6a10fe6e2ef49cdab57df3fa5256"
+      ]
+    },
+    {
+      "season": 5,
+      "disc": 4,
+      "hashes": [
+        "8eddff9b7b9690c57ff63853053bc32f132da0a9"
+      ]
+    },
+    {
+      "season": 5,
+      "disc": 5,
+      "hashes": [
+        "694a58813097c0671ce047635166cecb70bfcb2f"
+      ]
+    },
+    {
+      "season": 6,
+      "disc": 1,
+      "hashes": [
+        "b814d1c79209063282e1f33f71b47ef90ed4e34b"
+      ]
+    },
+    {
+      "season": 6,
+      "disc": 2,
+      "hashes": [
+        "5f1ff1aed938220771b845f323d7cd7c5471fa04"
+      ]
+    },
+    {
+      "season": 6,
+      "disc": 3,
+      "hashes": [
+        "cc4c0268bc531ec0080e8e1ec70e46e098f21848"
+      ]
+    },
+    {
+      "season": 6,
+      "disc": 4,
+      "hashes": [
+        "d2384cac19bdaafc4c96f82eabf4697ef2486dec"
+      ]
+    },
+    {
+      "season": 6,
+      "disc": 5,
+      "hashes": [
+        "1fcd7e46476a64f435864af7de6e0e700514bb0a"
+      ]
+    },
+    {
+      "season": 7,
+      "disc": 1,
+      "hashes": [
+        "17d803c29f9fc475720838ef90cdc175a0931fa8"
+      ]
+    },
+    {
+      "season": 7,
+      "disc": 2,
+      "hashes": [
+        "6d7ca3457b7a22a94fe30dfb7ffd148461c6808e"
+      ]
+    },
+    {
+      "season": 7,
+      "disc": 3,
+      "hashes": [
+        "a56e25a9f20b2ad038d6bb1b3c9121f8263980eb"
+      ]
+    },
+    {
+      "season": 7,
+      "disc": 4,
+      "hashes": [
+        "05c1f7b4e4056db909278256461b01fe1d0602e3"
+      ]
+    },
+    {
+      "season": 7,
+      "disc": 5,
+      "hashes": [
+        "0379f0a2504a4c1e0b194b438e6567bac7a6a149"
+      ]
+    }
+  ],
   "episodes": [
     {
       "season": 1,
@@ -48,120 +294,120 @@
     },
     {
       "season": 1,
-      "episodeNum": "07",
+      "episodeNum": "09",
       "episodeOrder": 6,
+      "title": "Brief Candle",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "07",
+      "episodeOrder": 7,
       "title": "Cold Lazarus",
       "disc": 2,
+      "vts": 1,
+      "pgc": 4
+    },
+    {
+      "season": 1,
+      "episodeNum": "10",
+      "episodeOrder": 8,
+      "title": "Thor's Hammer",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 5
+    },
+    {
+      "season": 1,
+      "episodeNum": "11",
+      "episodeOrder": 9,
+      "title": "The Torment of Tantalus",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "12",
+      "episodeOrder": 10,
+      "title": "Bloodlines",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "13",
+      "episodeOrder": 11,
+      "title": "Fire and Water",
+      "disc": 3,
       "vts": 1,
       "pgc": 3
     },
     {
       "season": 1,
       "episodeNum": "08",
-      "episodeOrder": 7,
-      "title": "The Nox",
-      "disc": 2,
-      "vts": 1,
-      "pgc": 4
-    },
-    {
-      "season": 1,
-      "episodeNum": "09",
-      "episodeOrder": 8,
-      "title": "Brief Candle",
-      "disc": 3,
-      "vts": 1,
-      "pgc": 1
-    },
-    {
-      "season": 1,
-      "episodeNum": "10",
-      "episodeOrder": 9,
-      "title": "Thors Hammer",
-      "disc": 3,
-      "vts": 1,
-      "pgc": 2
-    },
-    {
-      "season": 1,
-      "episodeNum": "11",
-      "episodeOrder": 10,
-      "title": "The Torment of Tantalus",
-      "disc": 3,
-      "vts": 1,
-      "pgc": 3
-    },
-    {
-      "season": 1,
-      "episodeNum": "12",
-      "episodeOrder": 11,
-      "title": "Bloodlines",
-      "disc": 3,
-      "vts": 1,
-      "pgc": 4
-    },
-    {
-      "season": 1,
-      "episodeNum": "13",
       "episodeOrder": 12,
-      "title": "Fire and Water",
-      "disc": 4,
+      "title": "The Nox",
+      "disc": 3,
       "vts": 1,
-      "pgc": 1
+      "pgc": 4
     },
     {
       "season": 1,
       "episodeNum": "14",
       "episodeOrder": 13,
       "title": "Hathor",
-      "disc": 4,
+      "disc": 3,
       "vts": 1,
-      "pgc": 2
-    },
-    {
-      "season": 1,
-      "episodeNum": "15",
-      "episodeOrder": 14,
-      "title": "Singularity",
-      "disc": 4,
-      "vts": 1,
-      "pgc": 3
+      "pgc": 5
     },
     {
       "season": 1,
       "episodeNum": "16",
-      "episodeOrder": 15,
+      "episodeOrder": 14,
       "title": "Cor-Ai",
       "disc": 4,
       "vts": 1,
-      "pgc": 4
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "Singularity",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
     },
     {
       "season": 1,
       "episodeNum": "17",
       "episodeOrder": 16,
       "title": "Enigma",
-      "disc": 5,
+      "disc": 4,
       "vts": 1,
-      "pgc": 1
-    },
-    {
-      "season": 1,
-      "episodeNum": "18",
-      "episodeOrder": 17,
-      "title": "Solitudes",
-      "disc": 5,
-      "vts": 1,
-      "pgc": 2
+      "pgc": 3
     },
     {
       "season": 1,
       "episodeNum": "19",
-      "episodeOrder": 18,
+      "episodeOrder": 17,
       "title": "Tin Man",
-      "disc": 5,
+      "disc": 4,
       "vts": 1,
-      "pgc": 3
+      "pgc": 4
+    },
+    {
+      "season": 1,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "Solitudes",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 5
     },
     {
       "season": 1,
@@ -170,25 +416,25 @@
       "title": "There But For the Grace of God",
       "disc": 5,
       "vts": 1,
-      "pgc": 4
+      "pgc": 1
     },
     {
       "season": 1,
       "episodeNum": "21",
       "episodeOrder": 20,
       "title": "Politics",
-      "disc": 6,
+      "disc": 5,
       "vts": 1,
-      "pgc": 1
+      "pgc": 2
     },
     {
       "season": 1,
       "episodeNum": "22",
       "episodeOrder": 21,
       "title": "Within the Serpents Grasp",
-      "disc": 6,
+      "disc": 5,
       "vts": 1,
-      "pgc": 2
+      "pgc": 3
     },
     {
       "season": 2,
@@ -267,9 +513,9 @@
       "episodeNum": "09",
       "episodeOrder": 9,
       "title": "Secrets",
-      "disc": 3,
+      "disc": 2,
       "vts": 1,
-      "pgc": 1
+      "pgc": 5
     },
     {
       "season": 2,
@@ -278,7 +524,7 @@
       "title": "Bane",
       "disc": 3,
       "vts": 1,
-      "pgc": 2
+      "pgc": 1
     },
     {
       "season": 2,
@@ -287,7 +533,7 @@
       "title": "The Tokra Part 1",
       "disc": 3,
       "vts": 1,
-      "pgc": 3
+      "pgc": 2
     },
     {
       "season": 2,
@@ -296,61 +542,61 @@
       "title": "The Tokra Part 2",
       "disc": 3,
       "vts": 1,
-      "pgc": 4
+      "pgc": 3
     },
     {
       "season": 2,
       "episodeNum": "13",
       "episodeOrder": 13,
       "title": "Spirits",
-      "disc": 4,
+      "disc": 3,
       "vts": 1,
-      "pgc": 1
+      "pgc": 4
     },
     {
       "season": 2,
       "episodeNum": "14",
       "episodeOrder": 14,
       "title": "Touchstone",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 5
+    },
+    {
+      "season": 2,
+      "episodeNum": "16",
+      "episodeOrder": 15,
+      "title": "A Matter of Time",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "15",
+      "episodeOrder": 16,
+      "title": "The Fifth Race",
       "disc": 4,
       "vts": 1,
       "pgc": 2
     },
     {
       "season": 2,
-      "episodeNum": "15",
-      "episodeOrder": 15,
-      "title": "The Fifth Race",
+      "episodeNum": "18",
+      "episodeOrder": 17,
+      "title": "Serpents Song",
       "disc": 4,
       "vts": 1,
       "pgc": 3
     },
     {
       "season": 2,
-      "episodeNum": "16",
-      "episodeOrder": 16,
-      "title": "A Matter of Time",
+      "episodeNum": "17",
+      "episodeOrder": 18,
+      "title": "Holiday",
       "disc": 4,
       "vts": 1,
       "pgc": 4
-    },
-    {
-      "season": 2,
-      "episodeNum": "17",
-      "episodeOrder": 17,
-      "title": "Holiday",
-      "disc": 5,
-      "vts": 1,
-      "pgc": 1
-    },
-    {
-      "season": 2,
-      "episodeNum": "18",
-      "episodeOrder": 18,
-      "title": "Serpents Song",
-      "disc": 5,
-      "vts": 1,
-      "pgc": 2
     },
     {
       "season": 2,
@@ -359,7 +605,7 @@
       "title": "One False Step",
       "disc": 5,
       "vts": 1,
-      "pgc": 3
+      "pgc": 1
     },
     {
       "season": 2,
@@ -368,25 +614,25 @@
       "title": "Show and Tell",
       "disc": 5,
       "vts": 1,
-      "pgc": 4
+      "pgc": 2
     },
     {
       "season": 2,
       "episodeNum": "21",
       "episodeOrder": 21,
       "title": "1969",
-      "disc": 6,
+      "disc": 5,
       "vts": 1,
-      "pgc": 1
+      "pgc": 3
     },
     {
       "season": 2,
       "episodeNum": "22",
       "episodeOrder": 22,
       "title": "Out of Mind",
-      "disc": 6,
+      "disc": 5,
       "vts": 1,
-      "pgc": 2
+      "pgc": 4
     },
     {
       "season": 3,
@@ -465,9 +711,9 @@
       "episodeNum": "09",
       "episodeOrder": 9,
       "title": "Rules of Engagement",
-      "disc": 3,
+      "disc": 2,
       "vts": 1,
-      "pgc": 1
+      "pgc": 5
     },
     {
       "season": 3,
@@ -476,7 +722,7 @@
       "title": "Forever in a Day",
       "disc": 3,
       "vts": 1,
-      "pgc": 2
+      "pgc": 1
     },
     {
       "season": 3,
@@ -485,7 +731,7 @@
       "title": "Past and Present",
       "disc": 3,
       "vts": 1,
-      "pgc": 3
+      "pgc": 2
     },
     {
       "season": 3,
@@ -494,16 +740,16 @@
       "title": "Jolinars Memories",
       "disc": 3,
       "vts": 1,
-      "pgc": 4
+      "pgc": 3
     },
     {
       "season": 3,
       "episodeNum": "13",
       "episodeOrder": 13,
       "title": "The Devil You Know",
-      "disc": 4,
+      "disc": 3,
       "vts": 1,
-      "pgc": 1
+      "pgc": 4
     },
     {
       "season": 3,
@@ -512,7 +758,7 @@
       "title": "Foothold",
       "disc": 4,
       "vts": 1,
-      "pgc": 2
+      "pgc": 1
     },
     {
       "season": 3,
@@ -521,7 +767,7 @@
       "title": "Pretense",
       "disc": 4,
       "vts": 1,
-      "pgc": 3
+      "pgc": 2
     },
     {
       "season": 3,
@@ -530,16 +776,16 @@
       "title": "Urgo",
       "disc": 4,
       "vts": 1,
-      "pgc": 4
+      "pgc": 3
     },
     {
       "season": 3,
       "episodeNum": "17",
       "episodeOrder": 17,
       "title": "A Hundred Days",
-      "disc": 5,
+      "disc": 4,
       "vts": 1,
-      "pgc": 1
+      "pgc": 4
     },
     {
       "season": 3,
@@ -548,7 +794,7 @@
       "title": "Shades of Grey",
       "disc": 5,
       "vts": 1,
-      "pgc": 2
+      "pgc": 1
     },
     {
       "season": 3,
@@ -557,7 +803,7 @@
       "title": "New Ground",
       "disc": 5,
       "vts": 1,
-      "pgc": 3
+      "pgc": 2
     },
     {
       "season": 3,
@@ -573,18 +819,18 @@
       "episodeNum": "21",
       "episodeOrder": 21,
       "title": "Crystal Skull",
-      "disc": 6,
+      "disc": 5,
       "vts": 1,
-      "pgc": 1
+      "pgc": 4
     },
     {
       "season": 3,
       "episodeNum": "22",
       "episodeOrder": 22,
       "title": "Nemesis",
-      "disc": 6,
+      "disc": 5,
       "vts": 1,
-      "pgc": 2
+      "pgc": 5
     },
     {
       "season": 4,
@@ -699,9 +945,9 @@
       "episodeNum": "13",
       "episodeOrder": 13,
       "title": "The Curse",
-      "disc": 4,
+      "disc": 3,
       "vts": 1,
-      "pgc": 1
+      "pgc": 5
     },
     {
       "season": 4,
@@ -710,7 +956,7 @@
       "title": "The Serpents Venom",
       "disc": 4,
       "vts": 1,
-      "pgc": 2
+      "pgc": 1
     },
     {
       "season": 4,
@@ -719,7 +965,7 @@
       "title": "Chain Reaction",
       "disc": 4,
       "vts": 1,
-      "pgc": 3
+      "pgc": 2
     },
     {
       "season": 4,
@@ -728,25 +974,25 @@
       "title": "2010",
       "disc": 4,
       "vts": 1,
-      "pgc": 4
+      "pgc": 3
     },
     {
       "season": 4,
       "episodeNum": "17",
       "episodeOrder": 17,
       "title": "Absolute Power",
-      "disc": 5,
+      "disc": 4,
       "vts": 1,
-      "pgc": 1
+      "pgc": 4
     },
     {
       "season": 4,
       "episodeNum": "18",
       "episodeOrder": 18,
       "title": "The Light",
-      "disc": 5,
+      "disc": 4,
       "vts": 1,
-      "pgc": 2
+      "pgc": 5
     },
     {
       "season": 4,
@@ -755,7 +1001,7 @@
       "title": "Prodigy",
       "disc": 5,
       "vts": 1,
-      "pgc": 3
+      "pgc": 1
     },
     {
       "season": 4,
@@ -764,7 +1010,7 @@
       "title": "Entity",
       "disc": 5,
       "vts": 1,
-      "pgc": 4
+      "pgc": 2
     },
     {
       "season": 4,
@@ -773,7 +1019,7 @@
       "title": "Double Jeopardy",
       "disc": 6,
       "vts": 1,
-      "pgc": 1
+      "pgc": 3
     },
     {
       "season": 4,
@@ -782,7 +1028,7 @@
       "title": "Exodus",
       "disc": 6,
       "vts": 1,
-      "pgc": 2
+      "pgc": 4
     },
     {
       "season": 5,
@@ -933,9 +1179,9 @@
       "episodeNum": "17",
       "episodeOrder": 17,
       "title": "Fail Safe",
-      "disc": 5,
+      "disc": 4,
       "vts": 1,
-      "pgc": 1
+      "pgc": 5
     },
     {
       "season": 5,
@@ -944,7 +1190,7 @@
       "title": "The Warrior",
       "disc": 5,
       "vts": 1,
-      "pgc": 2
+      "pgc": 1
     },
     {
       "season": 5,
@@ -953,7 +1199,7 @@
       "title": "Menace",
       "disc": 5,
       "vts": 1,
-      "pgc": 3
+      "pgc": 2
     },
     {
       "season": 5,
@@ -962,16 +1208,16 @@
       "title": "The Sentinel",
       "disc": 5,
       "vts": 1,
-      "pgc": 4
+      "pgc": 3
     },
     {
       "season": 5,
       "episodeNum": "21",
       "episodeOrder": 21,
       "title": "Meridian",
-      "disc": 6,
+      "disc": 5,
       "vts": 1,
-      "pgc": 1
+      "pgc": 4
     },
     {
       "season": 5,
@@ -1040,7 +1286,7 @@
       "season": 6,
       "episodeNum": "07",
       "episodeOrder": 7,
-      "title": "Shadow Sky",
+      "title": "Shadow Play",
       "disc": 2,
       "vts": 1,
       "pgc": 3
@@ -1131,9 +1377,9 @@
       "episodeNum": "17",
       "episodeOrder": 17,
       "title": "Disclosure",
-      "disc": 5,
+      "disc": 4,
       "vts": 1,
-      "pgc": 1
+      "pgc": 5
     },
     {
       "season": 6,
@@ -1142,7 +1388,7 @@
       "title": "Forsaken",
       "disc": 5,
       "vts": 1,
-      "pgc": 2
+      "pgc": 1
     },
     {
       "season": 6,
@@ -1151,7 +1397,7 @@
       "title": "The Changeling",
       "disc": 5,
       "vts": 1,
-      "pgc": 3
+      "pgc": 2
     },
     {
       "season": 6,
@@ -1160,25 +1406,25 @@
       "title": "Memento",
       "disc": 5,
       "vts": 1,
-      "pgc": 4
+      "pgc": 3
     },
     {
       "season": 6,
       "episodeNum": "21",
       "episodeOrder": 21,
       "title": "Prophecy",
-      "disc": 6,
+      "disc": 5,
       "vts": 1,
-      "pgc": 1
+      "pgc": 4
     },
     {
       "season": 6,
       "episodeNum": "22",
       "episodeOrder": 22,
       "title": "Full Circle",
-      "disc": 6,
+      "disc": 5,
       "vts": 1,
-      "pgc": 2
+      "pgc": 5
     },
     {
       "season": 7,
@@ -1329,9 +1575,9 @@
       "episodeNum": "17",
       "episodeOrder": 17,
       "title": "Heroes Part 1",
-      "disc": 5,
+      "disc": 4,
       "vts": 1,
-      "pgc": 1
+      "pgc": 5
     },
     {
       "season": 7,
@@ -1340,7 +1586,7 @@
       "title": "Heroes Part 2",
       "disc": 5,
       "vts": 1,
-      "pgc": 2
+      "pgc": 1
     },
     {
       "season": 7,
@@ -1349,7 +1595,7 @@
       "title": "Resurrection",
       "disc": 5,
       "vts": 1,
-      "pgc": 3
+      "pgc": 2
     },
     {
       "season": 7,
@@ -1358,25 +1604,16 @@
       "title": "Inauguration",
       "disc": 5,
       "vts": 1,
-      "pgc": 4
+      "pgc": 3
     },
     {
       "season": 7,
-      "episodeNum": "21",
+      "episodeNum": "2122",
       "episodeOrder": 21,
       "title": "Lost City Part 1",
-      "disc": 7,
+      "disc": 5,
       "vts": 1,
-      "pgc": 1
-    },
-    {
-      "season": 7,
-      "episodeNum": "22",
-      "episodeOrder": 22,
-      "title": "Lost City Part 2",
-      "disc": 7,
-      "vts": 1,
-      "pgc": 2
+      "pgc": 4
     },
     {
       "season": 8,

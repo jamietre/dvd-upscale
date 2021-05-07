@@ -24,16 +24,16 @@ export async function deleteDir(dir: string) {
 /**
  * Delete everything in a directory matching a glob
  */
-export async function deleteFilesForPattern(dir: string, pat: string) {
+export async function deleteFilesForPattern(dir: string, pat: string): Promise<boolean> {
   const files = (await readdir(dir)) || [];
   const matches = files.filter(file => minimatch(file, pat, minimatchOpts));
   if (!matches.length) {
-    console.log(`No matches for "${dir}/${pat}"`);
-    return;
+    return false;
   }
 
-  console.log(`Deleting ${matches.length} files matching "${dir}}/${pat}"`);
+  console.log(`Deleting ${matches.length} files matching "${dir}/${pat}"`);
   for (const file of matches) {
     await rm(`${dir}/${file}`, { recursive: true });
   }
+  return true;
 }

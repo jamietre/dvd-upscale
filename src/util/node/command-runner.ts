@@ -2,7 +2,6 @@ import { ChildProcess, spawn, SpawnOptions } from "child_process";
 
 import { Readable } from "stream";
 import { createDeferred } from "../promises";
-import { cleanSplitLines } from "../strings";
 import { assertIsDefined } from "../types";
 
 export type LogReader = (text: string) => void;
@@ -14,6 +13,7 @@ export type RunCommandOptions = {
   messageHandler?: (message: string) => void;
 } & SpawnOptions;
 
+const stdoutLogReader = (message: string) => process.stdout.write(message);
 export class CommandRunner {
   private _child: ChildProcess | undefined;
   private _messages: string[] | undefined;
@@ -31,13 +31,9 @@ export class CommandRunner {
    * will be returned in "messages" property of the return object
    */
   async run(command: string, args: string[] = [], options: RunCommandOptions = {}): Promise<void> {
-    const output: string[] = [];
+    const errors: string[] = [];
     const { logReader, messageHandler, ...nodeOptions } = options;
-    const reader =
-      logReader ||
-      ((data: string) => {
-        output.push(data);
-      });
+    const reader = logReader || stdoutLogReader;
 
     function consumeOutput(stream: Readable, handler: (message: Buffer) => void) {
       stream.on("readable", () => {
@@ -54,7 +50,10 @@ export class CommandRunner {
       consumeOutput(child.stdout, msg => reader(msg.toString()));
     }
     if (child.stderr) {
-      consumeOutput(child.stderr, msg => reader(msg.toString()));
+      consumeOutput(child.stderr, msg => {
+        errors.push(msg.toString());
+        reader(msg.toString());
+      });
     }
 
     child.on("error", (err: Error) => {
@@ -62,10 +61,10 @@ export class CommandRunner {
     });
     child.on("exit", code => {
       if (code === 0) {
-        deferred.resolve(cleanSplitLines(output.join("\n")));
+        deferred.resolve();
         return;
       }
-      deferred.reject(new Error(output.join("\n")));
+      deferred.reject(new Error(errors.join("\n")));
     });
     if (messageHandler) {
       child.on("message", messageHandler);

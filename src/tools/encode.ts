@@ -1,11 +1,7 @@
 import { promises } from "fs";
 import { container } from "tsyringe";
 import { Episode } from "../lib/episode";
-import { getAbsolutePath } from "../util/node/files";
-import { AviSynth, AvisScriptOptions } from "./avisynth";
 import { FFMpeg } from "./ffmpeg";
-
-const { readFile } = promises;
 
 export async function encode(episode: Episode) {
   const { profile } = episode;
@@ -43,4 +39,6 @@ export async function encode(episode: Episode) {
       streamIndex: "all",
     },
   });
+
+  await ff.run(`${workDir}/${episode.getFileNames().timecodeMetrics}`);
 }

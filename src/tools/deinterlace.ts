@@ -13,7 +13,7 @@ export async function deinterlace(episode: Episode) {
   const model = profile.getDeintModel();
   for (const script of model.scripts) {
     const passes = script.passes ?? 1;
-    for (let pass = 0; pass < passes; pass++) {
+    for (let pass = 1; pass <= passes; pass++) {
       const fileName = getAbsolutePath(script.scriptPath);
       const scriptText = await readFile(fileName, "utf-8");
       const avis = container.resolve(AviSynth);
@@ -23,7 +23,7 @@ export async function deinterlace(episode: Episode) {
         passNumber: pass,
         inputFile: `${workDir}/${dgIndexFiles.d2vIndex}`,
         ouptutFileBase: `${workDir}/${baseFileName}.tmp`,
-        timecodeFileName: `${workDir}/${baseFileName}.timecode`,
+        timecodeFileName: `${workDir}/${baseFileName}.timecodes.txt`,
       };
       await avis.run({
         script: scriptText,

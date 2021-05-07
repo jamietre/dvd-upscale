@@ -8,5 +8,6 @@
   "targetFramerate": "24000/1001",
   "aspectRatio": "4:3",
   "imageFormat": "png",
-  "seasonsSource": "./sources/st-ds9-dvd.json"
+  "seasonsSource": "./sources/st-ds9-dvd.json",
+  "targetCodec": "h265"
 }

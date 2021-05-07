@@ -1,3 +1,4 @@
+import { mkdir } from "fs/promises";
 import { container } from "../util/di";
 import { injectable } from "tsyringe";
 import { Config } from "../lib/config";
@@ -10,7 +11,7 @@ import { getLastFile } from "../util/node/last-file";
 export const aiModels = ["ghq-5", "amq-12", "amq-13"] as const;
 export type AiModel = typeof aiModels[number];
 
-export const imageFormats = ["jpg", "png", "tiff8", "tiff16"] as const;
+export const imageFormats = ["jpg", "png", "16tif", "8tif"] as const;
 export type ImageFormats = typeof imageFormats[number];
 
 export type VeaiOptionsCommon = {
@@ -38,7 +39,8 @@ export class Veai {
 
     args.push("--input", String(options.inputFile));
     args.push("--output", String(options.outputDir));
-    args.push("--width:height");
+    args.push("-f", options.outputFormat);
+    args.push("-m", options.aiModel);
     if (options.beginFrame !== undefined) {
       args.push("--begin-frame", String(options.beginFrame));
     }
@@ -58,7 +60,10 @@ export class Veai {
   async run(options: VeaiOptions): Promise<void> {
     const { config, commandRunner } = this;
     const args = this.getArgs(options);
-    await commandRunner.run(config.veai, args);
+
+    await commandRunner.run(config.veai, args, {
+      logReader: message => process.stdout.write(message),
+    });
   }
 }
 
@@ -72,6 +77,8 @@ export async function upscaleVeai(episode: Episode): Promise<void> {
   let beginFrame: number | undefined;
   if (outputDirExists) {
     beginFrame = await getLastFile(outputDir);
+  } else {
+    await mkdir(outputDir);
   }
 
   await veai.run({
