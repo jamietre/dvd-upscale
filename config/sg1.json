@@ -5,7 +5,7 @@
   "grainAmount": 0,
   "projectDir": "j:/VideoIncoming/Stargate sg-1",
   "episodeRootName": "Stargate sg-1",
-  "targetFramerate": "24000/1001",
+  "targetFramerate": "30000/1001",
   "aspectRatio": "16:9",
   "imageFormat": "16tif",
   "seasonsSource": "./sources/stargate-sg1-dvd.json",

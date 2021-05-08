@@ -66,9 +66,10 @@ export async function encode(episode: Episode) {
   });
 
   ff.setGlobalOptions({
+    outputFile: `${workDir}/${episode.getFileNames().rawEncodedFile}`,
     maxInterleaveDelta: 0,
     defaultMode: "infer_no_subs",
   });
 
-  await ff.run(`${workDir}/${episode.getFileNames().rawEncodedFile}`, { showCommand: true });
+  await ff.run({ showCommand: true });
 }

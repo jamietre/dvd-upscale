@@ -5,7 +5,7 @@
   "grainAmount": 1.6,
   "projectDir": "j:/VideoIncoming/Deep Space Nine",
   "episodeRootName": "Star Trek DS9",
-  "targetFramerate": "24000/1001",
+  "targetFramerate": "30000/1001",
   "aspectRatio": "4:3",
   "imageFormat": "png",
   "seasonsSource": "./sources/st-ds9-dvd.json",

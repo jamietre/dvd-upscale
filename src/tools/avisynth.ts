@@ -61,8 +61,10 @@ export class AviSynth {
           },
         },
       });
-
-      await ffmpeg.run(outputFile);
+      ffmpeg.setGlobalOptions({
+        outputFile,
+      });
+      await ffmpeg.run();
     } finally {
       // await tmpDir.delete();
     }

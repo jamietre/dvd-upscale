@@ -65,6 +65,7 @@ export class Episode {
   getFileNames() {
     const { profile } = this;
     const baseFileName = this.getBaseFileName();
+    const encodedFileNameBase = `${baseFileName}.${profile.config.deintModel}.${profile.config.targetCodec}`;
     return {
       vob: baseFileName + ".VOB",
       ifo: baseFileName + ".IFO",
@@ -75,7 +76,8 @@ export class Episode {
       /**
        * This is the output from FFMPEG, before the timecodes have been merged
        */
-      rawEncodedFile: `${baseFileName}.${profile.config.deintModel}.${profile.config.targetCodec}.no-timecodes.mkv`,
+      rawEncodedFile: `${encodedFileNameBase}.no-timecodes.mkv`,
+      finalEncodedFile: `${encodedFileNameBase}.mkv`,
     };
   }
   async getDgIndexFiles() {

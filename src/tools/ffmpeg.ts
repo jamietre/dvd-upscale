@@ -129,6 +129,7 @@ export type Disposition =
   | "metadata";
 
 type GlobalOptions = {
+  outputFile?: string;
   maxInterleaveDelta?: number;
   /**
    * Replace existing file; default is true
@@ -196,7 +197,7 @@ export class FFMpeg {
     };
     return options;
   }
-  getArgs(outputFile?: string): string[] {
+  getArgs(): string[] {
     const args: string[] = [];
     this.inputs.forEach(input => {
       const inputOptions = input.options;
@@ -254,27 +255,21 @@ export class FFMpeg {
     });
 
     this.addGlobalOptions(args);
-
-    if (outputFile) {
-      args.push(outputFile);
-    }
     return args;
   }
 
-  async run(outputFile?: string, options: { showCommand?: boolean } = {}): Promise<void> {
+  async run(options: { showCommand?: boolean } = {}): Promise<void> {
     const { config, fs } = this;
+    const args = this.getArgs();
+
+    const { outputFile } = this.globalOptions;
     if (outputFile) {
       const outputRoot = path.dirname(outputFile);
       await fs.mkdirp(outputRoot);
     }
 
-    const args = this.getArgs(outputFile);
-
     await this.commandRunner.run(config.ffmpeg, args, {
       showCommand: options.showCommand,
-      logReader: message => {
-        process.stdout.write(message);
-      },
     });
   }
 
@@ -299,26 +294,12 @@ export class FFMpeg {
     if (globalOptions.overwriteExisting) {
       args.push("-y");
     }
+
+    if (globalOptions.outputFile) {
+      args.push(globalOptions.outputFile);
+    }
   }
-
-  // private validateOptions() {
-  //   this.outputStreams.forEach((stream, index) => {
-  //     if (
-  //       stream.map.inputIndex > this.inputs.length ||
-  //       stream.map.inputIndex < 0
-  //     ) {
-  //       throw new Error(
-  //         `Pipeline ${index} map refers to input index ${stream.map.inputIndex} which is invalid.`
-  //       );
-  //     }
-  //   });
-  // }
 }
-
-// function getCodecOptions(type: StreamType, codec: Encoder): string[] {
-//   const args: string[] = [];
-//   args.push(get);
-// }
 
 function getStreamSpecifier(streamType: StreamType, streamIndex: number | "all"): string {
   let spec = `${streamType}`;
