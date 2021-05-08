@@ -9,6 +9,7 @@ import { FFMpeg } from "../tools/ffmpeg";
 import { Logger } from "./logger/logger";
 import { AviSynth } from "../tools/avisynth";
 import { Veai } from "../tools/veai";
+import { Fs } from "../util/node/fs";
 
 export type CliCallback = (episode: Episode) => Promise<void>;
 
@@ -52,6 +53,7 @@ export async function registerEnvironment(profileName: string) {
     config,
     profile,
   });
+  container.register(Fs, { useValue: new Fs() });
   container.register(Logger, { useValue: new Logger(console) });
   container.register(Config, { useValue: config });
   container.register(Context, { useValue: context });

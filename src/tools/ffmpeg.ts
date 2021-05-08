@@ -30,7 +30,7 @@ import { injectable } from "tsyringe";
 
 import { Config } from "../lib/config";
 import { CommandRunner } from "../util/node/command-runner";
-import { mkdirp } from "../util/node/fs-helpers";
+import { Fs } from "../util/node/fs";
 import { assertNever } from "../util/types";
 
 export type StreamType = "a" | "v" | "s";
@@ -60,19 +60,25 @@ type VideoEncoder = EncoderCopy | EncoderLibx265 | EncoderHuffYuv;
 type AudioEncoder = EncoderCopy;
 type SubtitleEncoder = EncoderCopy;
 
-type VideoFormat = "yuv420p101e";
-type SubtitleDisposition = "infer_no_subs";
-
-export type Map = {
-  input: InputFile;
+export type StreamSpecifier<T> = T & {
   streamIndex: number | "all";
 };
 
 export type InputFile = {
   inputPath: string;
   inputIndex: number;
-  threadQueueSize?: number;
   inputFormat?: "avi";
+  options?: InputOptions;
+};
+
+export const framerates = ["25", "30", "24000/1001", "30000/1001"] as const;
+export type Framerate = typeof framerates[number];
+
+export type VideoFilters = { format?: "yuv420p10le" };
+
+export type InputOptions = {
+  threadQueueSize?: number;
+  framerate?: Framerate;
 };
 
 export type Aspect = "4:3" | "16:9";
@@ -85,19 +91,42 @@ export type OutputStream =
   | {
       type: "v";
       codec: VideoEncoder;
-      format?: VideoFormat;
       aspect?: Aspect;
+      filters?: VideoFilters;
     }
   | {
       type: "s";
       codec: SubtitleEncoder;
-      disposition?: SubtitleDisposition;
     };
 
 type OutputFile = {
   stream: OutputStream;
-  map?: Map;
+  map?: StreamSpecifier<{
+    input: InputFile;
+  }>;
+  disposition?: StreamSpecifier<{
+    input: InputFile;
+    disposition: Disposition;
+  }>;
 };
+
+export type Disposition =
+  | "0"
+  | "default"
+  | "dub"
+  | "original"
+  | "comment"
+  | "lyrics"
+  | "karaoke"
+  | "forced"
+  | "hearing_impaired"
+  | "visual_impaired"
+  | "lean_effects"
+  | "attached_pic"
+  | "captions"
+  | "descriptions"
+  | "dependent"
+  | "metadata";
 
 type GlobalOptions = {
   maxInterleaveDelta?: number;
@@ -106,6 +135,23 @@ type GlobalOptions = {
    */
   overwriteExisting?: boolean;
   vsync?: "auto" | "passthrough" | "cfr" | "vfr" | "drop";
+  /**
+   * Default mode for the muxer
+   * https://ffmpeg.org/ffmpeg-formats.html#Options-10
+   */
+  defaultMode?: "ifer" | "infer_no_subs" | "passthrough";
+
+  logLevel?:
+    | "quiet"
+    | "panic"
+    | "fatal"
+    | "error"
+    | "warning"
+    | "info"
+    | "verbose"
+    | "debug"
+    | "trace";
+  stats?: boolean;
 };
 
 @injectable()
@@ -114,14 +160,17 @@ export class FFMpeg {
   private inputs: InputFile[] = [];
   private globalOptions: GlobalOptions;
 
-  constructor(private config: Config, private commandRunner: CommandRunner) {
+  constructor(private config: Config, private commandRunner: CommandRunner, private fs: Fs) {
     this.globalOptions = this.getDefaultGlobalOptions();
   }
-  createInput(inputPath: string) {
+  createInput(inputPath: string, options?: InputOptions) {
     const inputStream: InputFile = {
       inputIndex: this.inputs.length,
       inputPath,
     };
+    if (options) {
+      inputStream.options = options;
+    }
     this.inputs.push(inputStream);
     return inputStream;
   }
@@ -142,29 +191,41 @@ export class FFMpeg {
   getDefaultGlobalOptions(): GlobalOptions {
     const options: GlobalOptions = {
       overwriteExisting: true,
+      logLevel: "error",
+      stats: true,
     };
     return options;
   }
   getArgs(outputFile?: string): string[] {
     const args: string[] = [];
     this.inputs.forEach(input => {
-      args.push("-i", input.inputPath);
-      if (input.threadQueueSize !== undefined) {
-        args.push("-thread_queue_size", String(input.threadQueueSize));
+      const inputOptions = input.options;
+      if (inputOptions) {
+        if (inputOptions.threadQueueSize !== undefined) {
+          args.push("-thread_queue_size", String(inputOptions.threadQueueSize));
+        }
+        if (inputOptions.framerate) {
+          args.push("-framerate", inputOptions.framerate);
+        }
       }
+      args.push("-i", input.inputPath);
       if (input.inputFormat !== undefined) {
         args.push("-f", input.inputFormat);
       }
     });
 
     this.outputs.forEach(stream => {
-      const { stream: output, map } = stream;
+      const { stream: output, map, disposition } = stream;
 
       const { codec, type } = output;
 
       if (map) {
-        const mapArgValue = getStreamSpecifier(type, map.input.inputIndex, map.streamIndex);
-        args.push("-map", mapArgValue);
+        const streamSpec = getStreamSpecifier(type, map.streamIndex);
+        args.push("-map", `${map.input.inputIndex}:${streamSpec}`);
+      }
+      if (disposition) {
+        const streamSpec = getStreamSpecifier(type, disposition.streamIndex);
+        args.push(`-disposition:${streamSpec}`, disposition.disposition);
       }
       const codecArg = `-c:${type}`;
       const codecArgValue = `${codec.name}`;
@@ -172,19 +233,18 @@ export class FFMpeg {
       args.push(...getEncoderArgs(codec));
 
       switch (output.type) {
-        case "v":
-          if (output.format) {
-            args.push("-vf", `format=${output.format}`);
-          }
+        case "v": {
           if (output.aspect) {
             args.push("-aspect", output.aspect);
           }
+          const filters = output?.filters;
+          if (filters?.format) {
+            args.push("-vf", `format=${filters.format}`);
+          }
 
           break;
+        }
         case "s":
-          if (map && output.disposition) {
-            args.push(`-disposition:s:${map.streamIndex}`, output.disposition);
-          }
           break;
         case "a":
           break;
@@ -201,28 +261,40 @@ export class FFMpeg {
     return args;
   }
 
-  async run(outputFile?: string): Promise<void> {
-    const { config } = this;
+  async run(outputFile?: string, options: { showCommand?: boolean } = {}): Promise<void> {
+    const { config, fs } = this;
     if (outputFile) {
       const outputRoot = path.dirname(outputFile);
-      await mkdirp(outputRoot);
+      await fs.mkdirp(outputRoot);
     }
 
     const args = this.getArgs(outputFile);
-    args.push("-loglevel", "quiet", "-stats");
 
     await this.commandRunner.run(config.ffmpeg, args, {
-      logReader: message => process.stdout.write(message),
+      showCommand: options.showCommand,
+      logReader: message => {
+        process.stdout.write(message);
+      },
     });
   }
 
   private addGlobalOptions(args: string[]) {
     const { globalOptions } = this;
-    if (globalOptions.maxInterleaveDelta) {
-      args.push("-max_interleave_delta");
+    if (globalOptions.defaultMode) {
+      args.push("-default_mode", globalOptions.defaultMode);
+    }
+
+    if (globalOptions.maxInterleaveDelta != null) {
+      args.push("-max_interleave_delta", String(globalOptions.maxInterleaveDelta));
     }
     if (globalOptions.vsync) {
       args.push("-vsync", globalOptions.vsync);
+    }
+    if (globalOptions.logLevel) {
+      args.push("-loglevel", globalOptions.logLevel);
+    }
+    if (globalOptions.stats) {
+      args.push("-stats");
     }
     if (globalOptions.overwriteExisting) {
       args.push("-y");
@@ -248,12 +320,8 @@ export class FFMpeg {
 //   args.push(get);
 // }
 
-function getStreamSpecifier(
-  streamType: StreamType,
-  inputIndex: number,
-  streamIndex: number | "all"
-): string {
-  let spec = `${inputIndex}:${streamType}`;
+function getStreamSpecifier(streamType: StreamType, streamIndex: number | "all"): string {
+  let spec = `${streamType}`;
 
   if (streamIndex === "all") {
     spec = `${spec}?`;

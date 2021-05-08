@@ -1,5 +1,5 @@
 {
-  "ffmpeg": "c:/ProgramData/chocolatey/bin/ffmpeg.exe",
+  "ffmpeg": "c:/data/apps/ffmpeg.exe",
   "veai": "c:/Program Files/Topaz Labs LLC/Topaz Video Enhance AI/veai.exe",
   "dgindex": "c:/data/apps/dgmpgdec2005/DGIndex.exe",
   "mkvmerge": "c:/Program Files/MKVToolNix/mkvmerge.exe",

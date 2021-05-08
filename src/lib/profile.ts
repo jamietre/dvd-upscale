@@ -4,17 +4,15 @@ import path from "path";
 
 import { assertHasOneElement, assertIncludes } from "../util/assert";
 import { loadConfigFile } from "../util/node/config-file";
-import { assertIsDefined, UnknownObject } from "../util/types";
+import { assertIsDefined, assertNever, UnknownObject } from "../util/types";
 import { Episode } from "./episode";
 import { AiModel, aiModels, ImageFormats, imageFormats } from "../tools/veai";
+import { Framerate, framerates } from "../tools/ffmpeg";
 
 const { readFile, writeFile } = promises;
 
 export const deintModelPresetNames = ["none", "ivtc3", "ivtc5"] as const;
 export type DeintModelPreset = typeof deintModelPresetNames[number];
-
-export const targetFramerates = ["30000/10001", "24000/1001"] as const;
-export type TargetFramerate = typeof targetFramerates[number];
 
 export const aspectRatios = ["4:3", "16:9"] as const;
 export type AspectRatios = typeof aspectRatios[number];
@@ -88,7 +86,7 @@ export type ProfileConfig = {
   grainSize: number;
   grainAmount: number;
   projectDir: string;
-  targetFramerate: TargetFramerate;
+  targetFramerate: Framerate;
   aspectRatio: AspectRatios;
   imageFormat: ImageFormats;
   /**
@@ -192,6 +190,22 @@ export class Profile {
     }
     return deintModelPresets[preset];
   }
+  get imageFileExtension(): string {
+    switch (this.config.imageFormat) {
+      case "png":
+        return "png";
+      case "16tif":
+      case "8tif":
+        return "tif";
+      case "jpg":
+        return "jpg";
+      default:
+        assertNever(this.config.imageFormat);
+    }
+  }
+  get framerate(): Framerate {
+    return this.config.targetFramerate;
+  }
   async loadDiscProfile(): Promise<void> {
     const { discProfilePath } = this.options;
     const episodesJson = await readFile(discProfilePath, "utf-8");
@@ -233,7 +247,7 @@ function assertIsProfileConfig(obj: UnknownObject | ProfileConfig): asserts obj 
   const profile = obj as ProfileConfig;
   assertIncludes(deintModelPresetNames, profile.deintModel, "deinterlace model");
   assertIncludes(aiModels, profile.upscaleModel, "upscale model");
-  assertIncludes(targetFramerates, profile.targetFramerate, "framerate");
+  assertIncludes(framerates, profile.targetFramerate, "framerate");
   assertIncludes(aspectRatios, profile.aspectRatio, "aspect ratio");
   assertIncludes(imageFormats, profile.imageFormat, "image format");
 }

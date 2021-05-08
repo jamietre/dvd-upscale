@@ -10,6 +10,7 @@
   "keywords": [],
   "scripts": {
     "test": "jest",
+    "test:inspect": "node --inspect ./node_modules/jest/bin/jest.js --runInBand",
     "lint": "eslint src --ext .ts --fix",
     "prettier": "prettier \"src/**/*.ts\" --list-different",
     "build": "run-p build:*",

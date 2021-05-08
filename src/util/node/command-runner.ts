@@ -11,6 +11,7 @@ export type RunCommandOptions = {
    */
   logReader?: LogReader;
   messageHandler?: (message: string) => void;
+  showCommand?: boolean;
 } & SpawnOptions;
 
 const stdoutLogReader = (message: string) => process.stdout.write(message);
@@ -43,6 +44,9 @@ export class CommandRunner {
         }
       });
     }
+    if (options.showCommand) {
+      console.log(`${command} ${formatArgs(args)}`);
+    }
     const child = spawn(command, args, nodeOptions);
     const deferred = createDeferred<string[]>();
 
@@ -64,7 +68,7 @@ export class CommandRunner {
         deferred.resolve();
         return;
       }
-      deferred.reject(new Error(errors.join("\n")));
+      deferred.reject(new Error(`Error ${code}: ` + errors.join("\n")));
     });
     if (messageHandler) {
       child.on("message", messageHandler);
@@ -91,4 +95,8 @@ export async function runCommandInteractive(command: string, args: string[]) {
       final();
     });
   });
+}
+
+function formatArgs(args: string[]): string {
+  return args.map(e => (e.includes(" ") || e.includes(":") ? `"${e}"` : e)).join(" ");
 }

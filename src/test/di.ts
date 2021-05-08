@@ -45,13 +45,13 @@ export function getTestProfileConfig(): ProfileConfig {
     imageFormat: "png",
     projectDir: "/path/to/project",
     episodeRootName: "My Show",
+    targetCodec: "h265",
   };
   return profileConfig;
 }
 export function getTestProfile() {
   const testProfile: Profile = new Profile({
     config: getTestProfileConfig(),
-    discProfile: { discs: [], episodes: [] },
     discProfilePath: "",
   });
   return testProfile;

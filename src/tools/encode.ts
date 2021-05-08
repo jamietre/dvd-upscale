@@ -1,15 +1,19 @@
-import { promises } from "fs";
 import { container } from "tsyringe";
 import { Episode } from "../lib/episode";
 import { FFMpeg } from "./ffmpeg";
 
 export async function encode(episode: Episode) {
-  const { profile } = episode;
-
-  const workDir = episode.getWorkDir();
   const ff = container.resolve(FFMpeg);
-  const input1 = ff.createInput("input-file-1");
-  const input2 = ff.createInput("input-file-2");
+  const workDir = episode.getWorkDir();
+  const imageDir = episode.getFileNames().veaiImageDir;
+  const imageFileExt = episode.profile.imageFileExtension;
+  const vobSource = episode.getFileNames().vob;
+
+  const input1 = ff.createInput(`${workDir}/${imageDir}/%06d.${imageFileExt}`, {
+    threadQueueSize: 512,
+    framerate: episode.profile.framerate,
+  });
+  const input2 = ff.createInput(`${workDir}/${vobSource}`, { threadQueueSize: 512 });
 
   ff.createOutput({
     stream: {
@@ -18,7 +22,10 @@ export async function encode(episode: Episode) {
         name: "libx265",
         crf: 20,
         profile: "main10",
-        preset: "slow",
+        preset: "slower",
+      },
+      filters: {
+        format: "yuv420p10le",
       },
     },
     map: {
@@ -40,5 +47,28 @@ export async function encode(episode: Episode) {
     },
   });
 
-  await ff.run(`${workDir}/${episode.getFileNames().timecodeMetrics}`);
+  ff.createOutput({
+    stream: {
+      type: "s",
+      codec: {
+        name: "copy",
+      },
+    },
+    map: {
+      input: input2,
+      streamIndex: "all",
+    },
+    disposition: {
+      input: input1,
+      streamIndex: 0,
+      disposition: "0",
+    },
+  });
+
+  ff.setGlobalOptions({
+    maxInterleaveDelta: 0,
+    defaultMode: "infer_no_subs",
+  });
+
+  await ff.run(`${workDir}/${episode.getFileNames().rawEncodedFile}`, { showCommand: true });
 }
