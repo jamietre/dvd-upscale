@@ -41,6 +41,7 @@ function process(clip Input, string "d2v", string "TfmFile", string "Metrics", s
   Repair(QTGMC2, QTGMC3, 9)
  
   Crop(8, 0, 704, 480)
+  # This makes pixels square which greatly improves compression during encoding later
   Spline64Resize(720, 540)
 }
 

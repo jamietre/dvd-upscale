@@ -32,6 +32,7 @@ Tooling to automate workflows for processing video. The core of this is TypeScri
 - Migrate handling of subtitles from ffmpeg to mkvmerge. (It makes more sense to keep the FFMpeg part of this as simple as possible since it's a far more complex tool; do anything we can do with mkvemerge there)
 - Make configuration better
 - Add documention (automation?) for installing all the avisynth dependencies
+- don't hardcode types for the avisynth scripts, these should be runtime configurable
 
 ### Prerequisites
 
@@ -63,3 +64,13 @@ There's no complilation for this project right now. Instead just run everything 
 `config/` - configuration files
 `doc/` - detailed documentation (todo)
 `legacy/` - A bunch of bash scripts hacked together that was the original incarnation of this project; not maintained
+
+## Discussion
+
+The hard part of doing this involves
+
+- good inverse telecine and deinterlacing of bad sources
+- dealing with variable frame rate sources
+- automating a lot of really old, janky tools
+
+One workflow here uses dgindex to extract timecodes from the VOB files, and then they get merged back in with mkvmerge at the end, allowing us to retain the VFR format for ugly sources like Star Trek Voyager & DS9.
