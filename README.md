@@ -27,6 +27,7 @@ Tooling to automate workflows for processing video. The core of this is TypeScri
 #### To Do
 
 - Automate batch processing
+- Automatically detect if a step has already been completed (look for output file); add universal option to always overwrite
 - Add some better exception handling; e.g. if any image file is missing from the images output, we should restart VEAI and re-do only the missing images
 - Email notification of status/errors
 - Migrate handling of subtitles from ffmpeg to mkvmerge. (It makes more sense to keep the FFMpeg part of this as simple as possible since it's a far more complex tool; do anything we can do with mkvemerge there)

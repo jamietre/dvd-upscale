@@ -95,7 +95,14 @@ export class DgIndex {
   async run(options: DgIndexOptions): Promise<void> {
     const { config, commandRunner } = this;
     const args = this.getArgs(options);
-    await commandRunner.run(config.dgindex, args);
+    await commandRunner.run(config.dgindex, args, {
+      logReader: msg => {
+        // suppress all the indexe numbers logged; emit anything that's not a plain number
+        if (Number.isNaN(Number(msg))) {
+          process.stdout.write(msg);
+        }
+      },
+    });
   }
 }
 

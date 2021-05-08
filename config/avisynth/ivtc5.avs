@@ -16,7 +16,10 @@ outfile_timecodes = timecodeFileName
 #trim(0,4800)
 SetFilterMTMode("DEFAULT_MT_MODE", MT_MULTI_INSTANCE)
 
-passNumber == 2 ? process(d2v=inputFile,TfmFile=outfile_tfm, Metrics=outfile_metrics, Timestamps=outfile_timecodes) : get_metrics(d2v=inputFile,TfmFile=outfile_tfm, Metrics=outfile_metrics) 
+passNumber == 2 ? 
+  process(d2v=inputFile,TfmFile=outfile_tfm, Metrics=outfile_metrics, Timestamps=outfile_timecodes) : 
+  get_metrics(d2v=inputFile,TfmFile=outfile_tfm, Metrics=outfile_metrics) 
+  
 Prefetch(4)
 
 #Pass 01
