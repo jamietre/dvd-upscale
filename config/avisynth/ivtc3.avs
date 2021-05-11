@@ -28,7 +28,7 @@ function get_metrics(clip Input, string "d2v", string "TfmFile", string "Metrics
 
 #Pass 02
 function process(clip Input, string "d2v", string "TfmFile", string "Metrics", string "Timestamps") {
-  ConvertToYV12(Input)
+  ConvertToYV16(Input)
   fft3dfilter(sigma=3,sigma2=3,sigma3=12,sigma4=3,bt=3,plane=2)
   chroma = checkmate(thr=12,max=25,tthr2=25)
   luma   = checkmate(thr=12,max=25,tthr2=0)

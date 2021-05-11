@@ -1,0 +1,13 @@
+{
+  "deintModel": "ivtc6",
+  "upscaleModel": "ddv-2",
+  "grainSize": 0,
+  "grainAmount": 0,
+  "projectDir": "j:/VideoIncoming/dvd/Man From UNCLE",
+  "episodeRootName": "Man From UNCLE",
+  "targetFramerate": "24000/1001",
+  "aspectRatio": "4:3",
+  "imageFormat": "16tif",
+  "seasonsSource": "./sources/man-from-uncle-dvd.json",
+  "targetCodec": "h265"
+}

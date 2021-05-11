@@ -1,0 +1,337 @@
+{
+  "discs": [
+    {
+      "season": 1,
+      "disc": 1,
+      "hashes": [
+        "99a2cb3b9377f94fac7c392e495a87d65ec73e70"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 2,
+      "hashes": [
+        "bdae168f75e68e5dca9de3665a69bbc95875e721"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 3,
+      "hashes": [
+        "745bef2c74b9197c168188eda2b5acefa3d6a040"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 4,
+      "hashes": [
+        "747f2b1894df3e2b3ef198e5eeb475151d4351f5"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 5,
+      "hashes": [
+        "51e14d9eb8a1bddcf42e9f73e69316c43273c455"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 6,
+      "hashes": [
+        "82c77ac1f492e5fa430c22f6400a0ff141eff8fc"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 7,
+      "hashes": [
+        "a1dc560d2e7791dfde3d76858d1d28d07272a823"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 8,
+      "hashes": [
+        "0c3197e19182f27bba4c9e78bf4bc5d1be9f24d8"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 9,
+      "hashes": [
+        "f1bc3730410426a861afe9ca00852ac1e4369793"
+      ]
+    },
+    {
+      "season": 1,
+      "disc": 10,
+      "hashes": [
+        "998d8200d443e84f4d4cffeb0965dda5ae647477"
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "season": 1,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "The Vulcan After",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "The Iowa Scuba Affair",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "The Quadripartite Affair",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "The Shark Affair",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "The Deadly Games Affair",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "The Green Opal Affair",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "The Giuoco Piano Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "The Double Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "The Project Strigas Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "The Finny Foot Affair",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "The Neptune Affair",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "The Dove Affair",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "The King of Knaves Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "The Terbuf Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "The Deadly Decoy Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "The Fiddlesticks Affair",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "The Yellow Scarf Affair",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "The Mad, Mad, Tea Party Affair",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "The Secret Sceptre Affair",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "The Bow-Wow Affair",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "The Four-Steps Affair",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "The See-Paris-and-Die Affair",
+      "disc": 8,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "23",
+      "episodeOrder": 23,
+      "title": "The Brain-Killer Affair",
+      "disc": 8,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "24",
+      "episodeOrder": 24,
+      "title": "The Hong Kong Shilling Affair",
+      "disc": 8,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "25",
+      "episodeOrder": 25,
+      "title": "The Never-Never Affair",
+      "disc": 9,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "26",
+      "episodeOrder": 26,
+      "title": "The Love Affair",
+      "disc": 9,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 1,
+      "episodeNum": "27",
+      "episodeOrder": 27,
+      "title": "The Gazebo in the Maze Affair",
+      "disc": 9,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 1,
+      "episodeNum": "28",
+      "episodeOrder": 28,
+      "title": "The Girls of Nazarone Affair",
+      "disc": 10,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 1,
+      "episodeNum": "29",
+      "episodeOrder": 29,
+      "title": "The Odd Man Affair",
+      "disc": 10,
+      "vts": 1,
+      "pgc": 2
+    }
+  ]
+}

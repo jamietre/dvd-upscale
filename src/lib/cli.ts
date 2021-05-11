@@ -10,6 +10,7 @@ import { Logger } from "./logger/logger";
 import { AviSynth } from "../tools/avisynth";
 import { Veai } from "../tools/veai";
 import { Fs } from "../util/node/fs";
+import { MkvMerge } from "../tools/mkvmerge";
 
 export type CliCallback = (episode: Episode) => Promise<void>;
 
@@ -62,6 +63,7 @@ export async function registerEnvironment(profileName: string) {
   container.register(FFMpeg, { useClass: FFMpeg });
   container.register(AviSynth, { useClass: AviSynth });
   container.register(Veai, { useClass: Veai });
+  container.register(MkvMerge, { useClass: MkvMerge });
 }
 
 export function startCli(callback: CliCallback) {

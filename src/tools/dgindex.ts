@@ -1,13 +1,11 @@
 import { injectable, container } from "tsyringe";
 import path from "path";
-import { promises } from "fs";
 
 import { Config } from "../lib/config";
 import { CommandRunner } from "../util/node/command-runner";
 import { Context } from "../lib/context";
 import { Episode } from "../lib/episode";
-
-const { readdir } = promises;
+import { Fs } from "../util/node/fs";
 
 export type AudioStream = {
   fileName: string;
@@ -67,7 +65,7 @@ export class DgIndex {
     hide: true,
     exit: true,
   };
-  constructor(private config: Config, private commandRunner: CommandRunner) {}
+  constructor(private config: Config, private fs: Fs, private commandRunner: CommandRunner) {}
   private getArgs(options: DgIndexOptions): string[] {
     options = {
       ...DgIndex.defaultOptions,
@@ -104,9 +102,39 @@ export class DgIndex {
       },
     });
   }
+
+  async parseDgIndexOutput(dir: string): Promise<DgIndexFiles> {
+    const { readdir } = this.fs;
+    const files = await readdir(dir);
+    const out: DgIndexFiles = {
+      audioStreams: [],
+      d2vIndex: "",
+    };
+
+    const audioStreamFiles: string[] = [];
+
+    files
+      .filter(e => e.includes(".dgindex"))
+      .forEach(file => {
+        const extname = path.extname(file).toLowerCase();
+        if (/ DELAY /.test(file)) {
+          audioStreamFiles.push(file);
+          return;
+        }
+        switch (extname) {
+          case ".d2v":
+            out.d2vIndex = file;
+            break;
+          default:
+            throw new Error(`Don't know what to do with file ${file} emitted by dgindex`);
+        }
+      });
+    out.audioStreams = parseAudioStreams(audioStreamFiles);
+    return out;
+  }
 }
 
-const audioStreamRegex = /dgindex T(\d+) (.+) (.+) DELAY (\d+)ms\.(.*)$/;
+const audioStreamRegex = /dgindex T(\d+) (.+) (.+) DELAY (-?\d+)ms\.(.*)$/;
 function parseAudioStreams(fileNames: string[]): AudioStream[] {
   return fileNames.map(fileName => {
     const match = fileName.match(audioStreamRegex);
@@ -123,35 +151,6 @@ function parseAudioStreams(fileNames: string[]): AudioStream[] {
     };
     return stream;
   });
-}
-
-async function parseDgIndexOutput(dir: string): Promise<DgIndexFiles> {
-  const files = await readdir(dir);
-  const out: DgIndexFiles = {
-    audioStreams: [],
-    d2vIndex: "",
-  };
-
-  const audioStreamFiles: string[] = [];
-
-  files
-    .filter(e => e.includes(".dgindex"))
-    .forEach(file => {
-      const extname = path.extname(file).toLowerCase();
-      if (/ DELAY /.test(file)) {
-        audioStreamFiles.push(file);
-        return;
-      }
-      switch (extname) {
-        case ".d2v":
-          out.d2vIndex = file;
-          break;
-        default:
-          throw new Error(`Don't know what to do with file ${file} emitted by dgindex`);
-      }
-    });
-  out.audioStreams = parseAudioStreams(audioStreamFiles);
-  return out;
 }
 
 export async function generateDgIndex(episode: Episode): Promise<void> {
@@ -178,10 +177,11 @@ export async function generateDgIndex(episode: Episode): Promise<void> {
     ...options,
   });
 
-  const outfiles = await parseDgIndexOutput(workDir);
+  const outfiles = await dgindex.parseDgIndexOutput(workDir);
   logger.info(`Finished; extracted d2v + ${outfiles.audioStreams.length} audio streams`);
 }
 
 export async function getDgIndexDataForEpisode(episode: Episode): Promise<DgIndexFiles> {
-  return parseDgIndexOutput(episode.getWorkDir());
+  const dgindex = container.resolve(DgIndex);
+  return dgindex.parseDgIndexOutput(episode.getWorkDir());
 }

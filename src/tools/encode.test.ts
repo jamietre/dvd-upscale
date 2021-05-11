@@ -12,9 +12,10 @@ describe("encode", () => {
     const commandRunner = {
       run: sinon.stub(),
     };
-    const fs = {
+    const fs: Fs = {
       mkdir: sinon.stub().resolves(),
       mkdirp: sinon.stub().resolves(),
+      readdir: sinon.stub().resolves(),
     };
     container.register(CommandRunner, { useValue: (commandRunner as unknown) as CommandRunner });
     container.register(Fs, { useValue: fs });

@@ -8,7 +8,7 @@ import { Episode } from "../lib/episode";
 import { existsDirectory } from "../util/node/fs-helpers";
 import { getLastFile } from "../util/node/last-file";
 
-export const aiModels = ["ghq-5", "amq-12", "amq-13"] as const;
+export const aiModels = ["ghq-5", "amq-12", "amq-13", "ddv-2"] as const;
 export type AiModel = typeof aiModels[number];
 
 export const imageFormats = ["jpg", "png", "16tif", "8tif"] as const;
@@ -77,6 +77,7 @@ export async function upscaleVeai(episode: Episode): Promise<void> {
   let beginFrame: number | undefined;
   if (outputDirExists) {
     beginFrame = await getLastFile(outputDir);
+    console.log(`Starting at frame ${beginFrame}`);
   } else {
     await mkdir(outputDir);
   }

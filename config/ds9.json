@@ -1,9 +1,9 @@
 {
   "deintModel": "ivtc5",
-  "upscaleModel": "amq-13",
+  "upscaleModel": "ddv-2",
   "grainSize": 0.5,
   "grainAmount": 1.6,
-  "projectDir": "j:/VideoIncoming/Deep Space Nine",
+  "projectDir": "j:/VideoIncoming/dvd/Deep Space Nine",
   "episodeRootName": "Star Trek DS9",
   "targetFramerate": "30000/1001",
   "aspectRatio": "4:3",

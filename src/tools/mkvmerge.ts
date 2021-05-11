@@ -34,7 +34,7 @@ export class MkvMerge {
   async run(options: MkvMergeOptions, commandOptions: CommandOptions = {}): Promise<void> {
     const { config, commandRunner } = this;
     const args = this.getArgs(options);
-    await commandRunner.run(config.dgindex, args, {
+    await commandRunner.run(config.mkvmerge, args, {
       showCommand: commandOptions.showCommand,
     });
   }
@@ -45,8 +45,15 @@ export async function mergeChaptersTimecodes(episode: Episode): Promise<void> {
   const workDir = episode.getWorkDir();
   const files = episode.getFileNames();
 
-  await mkvMerge.run({
-    inputFile: `${workDir}/${files.rawEncodedFile}`,
-    outputFile: `${workDir}/${files.finalEncodedFile}`,
-  });
+  await mkvMerge.run(
+    {
+      inputFile: `${workDir}/${files.rawEncodedFile}`,
+      outputFile: `${workDir}/${files.finalEncodedFile}`,
+      chaptersFile: `${workDir}/${files.chapters}`,
+      timestampsFile: `${workDir}/${files.timecodeMetrics}`,
+    },
+    {
+      showCommand: true,
+    }
+  );
 }

@@ -6,7 +6,7 @@ import { AviSynth, AvisScriptOptions } from "./avisynth";
 
 const { readFile } = promises;
 
-export async function deinterlace(episode: Episode) {
+export async function preprocess(episode: Episode) {
   const { profile } = episode;
 
   const workDir = episode.getWorkDir();

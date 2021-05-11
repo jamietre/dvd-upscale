@@ -11,7 +11,7 @@ import { Framerate, framerates } from "../tools/ffmpeg";
 
 const { readFile, writeFile } = promises;
 
-export const deintModelPresetNames = ["none", "ivtc3", "ivtc5"] as const;
+export const deintModelPresetNames = ["none", "ivtc3", "ivtc5", "ivtc6"] as const;
 export type DeintModelPreset = typeof deintModelPresetNames[number];
 
 export const aspectRatios = ["4:3", "16:9"] as const;
@@ -58,6 +58,7 @@ export type DeintModelSpec = {
 
 export type TargetCodec = "h265";
 
+// TODO: Move this to JSON config!
 const deintModelPresets = {
   ivtc5: {
     name: "ivtc5",
@@ -74,6 +75,15 @@ const deintModelPresets = {
       {
         scriptPath: "<configDir>/avisynth/ivtc3.avs",
         passes: 2,
+      },
+    ],
+  },
+  ivtc6: {
+    name: "ivtc6",
+    scripts: [
+      {
+        scriptPath: "<configDir>/avisynth/ivtc6.avs",
+        passes: 1,
       },
     ],
   },
