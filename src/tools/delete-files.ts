@@ -57,15 +57,16 @@ export async function deleteProjectFiles(episode: Episode) {
   if (indexFiles.d2vIndex) {
     await deleteFile(`${workDir}/${indexFiles.d2vIndex}`);
   }
-  for await (const file of indexFiles.audioStreams) {
-    await deleteFile(`${workDir}/${file}`);
-  }
+  await Promise.all(
+    indexFiles.audioStreams.map(async file => deleteFile(`${workDir}/${file.fileName}`))
+  );
 
   await deleteFile(`${workDir}/*.log`);
   await deleteFile(`${workDir}/*.tmp.*.txt`);
   await deleteFile(`${workDir}/*${files.timecodeMetrics}`);
+  await deleteFile(`${workDir}/*${files.chapters}`);
   await deleteFile(`${workDir}/${files.deinterlacedAvi}`);
   await deleteDir(`${workDir}/${files.rawEncodedFile}`);
-  await deleteFile(`${workDir}/avisynth-tmp-*`);
+  await deleteDir(`${workDir}/avisynth-tmp-*`);
   await deleteDir(`${workDir}/${files.veaiImageDir}`);
 }

@@ -69,6 +69,76 @@
       "hashes": [
         "998d8200d443e84f4d4cffeb0965dda5ae647477"
       ]
+    },
+    {
+      "season": 2,
+      "disc": 1,
+      "hashes": [
+        "3076a8020733279ad87ea06c1385c8e13cad1f41"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 2,
+      "hashes": [
+        "0574efcfb291088334f8d0be24a25045e372d4fa"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 3,
+      "hashes": [
+        "df40dffc49087d54abec73718eac2c35d22535f8"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 4,
+      "hashes": [
+        "b7a849c102ec61d3868b938ef867c2990edb7b0b"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 5,
+      "hashes": [
+        "5fb4af6ce79aa7db40822e1192569b36f66537d4"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 6,
+      "hashes": [
+        "07478eb40e10e156710eca521b6563548d9b45ea"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 7,
+      "hashes": [
+        "212dea69874d9d5af72857d486131baa3eb12763"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 8,
+      "hashes": [
+        "009c22ada9d8904dca4c61eb959ef520d89542c4"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 9,
+      "hashes": [
+        "259388d6b699db3b14dfd8ede871a4e7f97c8590"
+      ]
+    },
+    {
+      "season": 2,
+      "disc": 10,
+      "hashes": [
+        "4a3dc06eac47747851816a6fd001fb7aec5cec0a"
+      ]
     }
   ],
   "episodes": [
@@ -229,7 +299,7 @@
       "season": 1,
       "episodeNum": "18",
       "episodeOrder": 18,
-      "title": "The Mad, Mad, Tea Party Affair",
+      "title": "The Mad Mad Tea Party Affair",
       "disc": 6,
       "vts": 1,
       "pgc": 3
@@ -332,6 +402,276 @@
       "disc": 10,
       "vts": 1,
       "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "The Alexander the Greater Affair Part 1",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "The Alexander the Greater Affair Part 2",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "The Ultimate Computer Affair",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "The Foxes and Hounds Affair",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "The Discotheque Affair",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "The Re-Collectors Affair",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "The Arabian Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "The Tigers are Coming Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "The Deadly Toys Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "The Cherry Blossom Affair",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "The Virtue Affair",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "The Childrens Day Affair",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "The Adriatic Express Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "The Yukon Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "The Very Important Zombie Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "The Dippy Blonde Affair",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "The Deadly Goddess Affair",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "The Birds and the Bees Affair",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "The Waverly Ring Affair",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "The Bridge of Lions Affair Part 1",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "The Bridge of Lions Affair Part 2",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "The Foreign Legion Affair",
+      "disc": 8,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "23",
+      "episodeOrder": 23,
+      "title": "The Moonglow Affair",
+      "disc": 8,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "24",
+      "episodeOrder": 24,
+      "title": "The Nowhere Affair",
+      "disc": 8,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "25",
+      "episodeOrder": 25,
+      "title": "The King of Diamonds Affair",
+      "disc": 9,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "26",
+      "episodeOrder": 26,
+      "title": "The Project Deephole Affair",
+      "disc": 9,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "27",
+      "episodeOrder": 27,
+      "title": "The Round Table Affair",
+      "disc": 9,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 2,
+      "episodeNum": "28",
+      "episodeOrder": 28,
+      "title": "The Bat Cave Affair",
+      "disc": 10,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 2,
+      "episodeNum": "29",
+      "episodeOrder": 29,
+      "title": "The Minus-X Affair",
+      "disc": 10,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 2,
+      "episodeNum": "30",
+      "episodeOrder": 30,
+      "title": "The Indian Affairs Affair",
+      "disc": 10,
+      "vts": 1,
+      "pgc": 3
     }
   ]
 }

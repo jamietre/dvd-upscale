@@ -33,7 +33,7 @@ async function commonCli(callback: CliCallback) {
 
   const nodeArgIndex = process.argv.findIndex(e => e.endsWith(".exe") || e.endsWith(".js"));
   const processArgv = process.argv.slice(nodeArgIndex + 2);
-  const [args, _extra] = parser.parse_known_args(processArgv) as [CliOptions, unknown];
+  const args = parser.parse_args(processArgv) as CliOptions;
 
   await registerEnvironment(args.project);
 

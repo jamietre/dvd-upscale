@@ -8,6 +8,7 @@ import { assertIsDefined, assertNever, UnknownObject } from "../util/types";
 import { Episode } from "./episode";
 import { AiModel, aiModels, ImageFormats, imageFormats } from "../tools/veai";
 import { Framerate, framerates } from "../tools/ffmpeg";
+import { sanitizeFileName } from "../util/strings";
 
 const { readFile, writeFile } = promises;
 
@@ -241,7 +242,12 @@ export class Profile {
     const { discProfilePath } = this.options;
     const data: ProjectDiscProfile = {
       discs: this.discs.sort(discDataComparer),
-      episodes: this.episodes.sort(episodeDataComparer),
+      episodes: this.episodes.sort(episodeDataComparer).map(e => {
+        return {
+          ...e,
+          title: sanitizeFileName(e.title),
+        };
+      }),
     };
     await writeFile(discProfilePath, JSON.stringify(data, null, 2), "utf-8");
   }

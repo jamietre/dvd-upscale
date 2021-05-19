@@ -2,11 +2,11 @@
  * Split a string into lines, regardless of line endings.
  */
 export function splitLines(lines: string): string[] {
-  let cleanLines = lines.replace(/\r/g, '');
-  while (cleanLines.endsWith('\n')) {
+  let cleanLines = lines.replace(/\r/g, "");
+  while (cleanLines.endsWith("\n")) {
     cleanLines = cleanLines.slice(0, cleanLines.length - 1);
   }
-  return cleanLines.split('\n');
+  return cleanLines.split("\n");
 }
 
 /**
@@ -18,13 +18,13 @@ export function formatNewLines(lines: string): string {
   const out: string[] = [];
 
   // logic: if line starts with a non-letter, then don't reformat
-  splitLines(lines).forEach((line) => {
+  splitLines(lines).forEach(line => {
     const cleanLine = line.trimRight();
-    const flush = (line.length && !isLetter(line[0])) || cleanLine === '';
+    const flush = (line.length && !isLetter(line[0])) || cleanLine === "";
 
     if (flush) {
       if (buffer.length) {
-        out.push(buffer.join(' '));
+        out.push(buffer.join(" "));
         buffer = [];
       }
       out.push(cleanLine);
@@ -33,9 +33,9 @@ export function formatNewLines(lines: string): string {
     buffer.push(cleanLine);
   });
   if (buffer.length) {
-    out.push(buffer.join(' '));
+    out.push(buffer.join(" "));
   }
-  return out.join('\n');
+  return out.join("\n");
 }
 
 /**
@@ -43,27 +43,23 @@ export function formatNewLines(lines: string): string {
  */
 export function stripNewLines(lines: string): string {
   return splitLines(lines)
-    .map((line) => line.trim())
-    .filter((line) => !!line)
-    .join(' ');
+    .map(line => line.trim())
+    .filter(line => !!line)
+    .join(" ");
 }
 
 /**
  * Normalize a string into individual lines, removing any blank lines
  */
 export function cleanSplitLines(lines: string): string[] {
-  return splitLines(lines).filter((e) => !!e);
+  return splitLines(lines).filter(e => !!e);
 }
 
-export function joinWithAnd(items: string[], separator = ', ') {
+export function joinWithAnd(items: string[], separator = ", ") {
   if (items.length <= 1) {
     return items.join(separator);
   }
-  return (
-    items.slice(0, items.length - 1).join(separator) +
-    ' and ' +
-    items[items.length - 1]
-  );
+  return items.slice(0, items.length - 1).join(separator) + " and " + items[items.length - 1];
 }
 
 export function maybePlural(word: string, count: number) {
@@ -74,11 +70,7 @@ function isLetter(char: string) {
   return /[a-zA-Z]/.test(char);
 }
 
-export function truncateString(
-  message: string,
-  maxLength: number,
-  truncationMessage = ''
-) {
+export function truncateString(message: string, maxLength: number, truncationMessage = "") {
   if (message.length > maxLength) {
     return message.slice(0, maxLength) + truncationMessage;
   }
@@ -87,22 +79,22 @@ export function truncateString(
 
 export const camelToSnakeCase = (text: string): string => {
   if (!text) {
-    return '';
+    return "";
   }
   return (
     text[0].toLowerCase() +
     text
       .slice(1)
-      .replace(/[^a-zA-Z0-9]/g, '')
+      .replace(/[^a-zA-Z0-9]/g, "")
       .replace(/[A-Z]/g, (letter: string) => `-${letter.toLowerCase()}`)
   );
 };
 
 export const snakeCaseToCamelCase = (text: string): string => {
   if (!text) {
-    return '';
+    return "";
   }
-  const words = text.split('-');
+  const words = text.split("-");
 
   let returnString = words[0];
   for (let i = 1; i < words.length; i++) {
@@ -113,7 +105,16 @@ export const snakeCaseToCamelCase = (text: string): string => {
 
 export const initialCaps = (text: string): string => {
   if (!text) {
-    return '';
+    return "";
   }
   return text[0].toUpperCase() + text.slice(1);
 };
+
+const allowedChars = /[a-zA-Z0-9\s-_]/;
+
+export function sanitizeFileName(text: string): string {
+  return text
+    .split("")
+    .filter(e => allowedChars.test(e))
+    .join("");
+}

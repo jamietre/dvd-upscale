@@ -17,6 +17,7 @@ export type ImageFormats = typeof imageFormats[number];
 export type VeaiOptionsCommon = {
   outputFormat: ImageFormats;
   beginFrame?: number;
+  endFrame?: number;
   dimensions?: { width: number; height: number };
   height?: number;
   grainSize?: number;
@@ -44,6 +45,9 @@ export class Veai {
     if (options.beginFrame !== undefined) {
       args.push("--begin-frame", String(options.beginFrame));
     }
+    if (options.endFrame !== undefined) {
+      args.push("--end-frame", String(options.endFrame));
+    }
 
     if (options.dimensions !== undefined) {
       args.push("--width:height", `${options.dimensions.width}:${options.dimensions.height}`);
@@ -63,6 +67,7 @@ export class Veai {
 
     await commandRunner.run(config.veai, args, {
       logReader: message => process.stdout.write(message),
+      showCommand: true,
     });
   }
 }
@@ -82,7 +87,7 @@ export async function upscaleVeai(episode: Episode): Promise<void> {
     await mkdir(outputDir);
   }
 
-  await veai.run({
+  const veaiOptions: VeaiOptions = {
     inputFile: `${workDir}/${episode.getFileNames().deinterlacedAvi}`,
     outputDir,
     aiModel: profile.config.upscaleModel,
@@ -94,5 +99,16 @@ export async function upscaleVeai(episode: Episode): Promise<void> {
     },
     grainAmount: profile.config.grainAmount,
     grainSize: profile.config.grainSize,
-  });
+  };
+
+  // veia has a long-standing bug where the model selected from the CLI is not
+  // chosen, but rather the last used model is. It seems to fix itself on the 2nd
+  // invocation, so let's run this against just frame 0 first to try to be sure
+  // the correct model has been selected
+
+  await veai.run({ ...veaiOptions, beginFrame: 0, endFrame: 1 });
+  console.log("Finished VEAI dry run to trigger correct model.");
+
+  // now run for the whole video
+  await veai.run(veaiOptions);
 }

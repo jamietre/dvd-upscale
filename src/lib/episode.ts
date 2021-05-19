@@ -72,12 +72,12 @@ export class Episode {
       chapters: baseFileName + ".chapters.txt",
       timecodeMetrics: baseFileName + ".timecodes.txt",
       deinterlacedAvi: `${baseFileName}.${profile.getDeintModel().name}.mkv`,
-      veaiImageDir: "veai-images",
+      veaiImageDir: `veai-images-${profile.config.upscaleModel}`,
       /**
        * This is the output from FFMPEG, before the timecodes have been merged
        */
       rawEncodedFile: `${encodedFileNameBase}.no-timecodes.mkv`,
-      finalEncodedFile: `${encodedFileNameBase}.mkv`,
+      finalEncodedFile: `${encodedFileNameBase}.${profile.config.upscaleModel}.mkv`,
     };
   }
   async getDgIndexFiles() {

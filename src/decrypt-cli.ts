@@ -66,7 +66,7 @@ async function main(callback: CliCallback): Promise<void> {
     required: false,
   });
 
-  const [args, _extra] = parser.parse_known_args(process.argv) as [CliOptions, unknown];
+  const args = parser.parse_args(process.argv.slice(2)) as CliOptions;
 
   await registerEnvironment(args.project);
   await callback(args);

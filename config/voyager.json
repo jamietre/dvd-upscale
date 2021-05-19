@@ -1,8 +1,8 @@
 {
   "deintModel": "ivtc5",
   "upscaleModel": "ddv-2",
-  "grainSize": 0.5,
-  "grainAmount": 1.6,
+  "grainSize": 0,
+  "grainAmount": 0,
   "projectDir": "j:/VideoIncoming/dvd/Star Trek Voyager",
   "episodeRootName": "Star Trek Voyager",
   "targetFramerate": "30000/1001",

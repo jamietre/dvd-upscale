@@ -36,6 +36,7 @@ export class MkvMerge {
     const args = this.getArgs(options);
     await commandRunner.run(config.mkvmerge, args, {
       showCommand: commandOptions.showCommand,
+      successCodes: [0, 1],
     });
   }
 }

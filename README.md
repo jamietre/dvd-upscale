@@ -26,12 +26,14 @@ Tooling to automate workflows for processing video. The core of this is TypeScri
 
 #### To Do
 
+- Set up a build so this doesn't need ts-node to run
 - Automate batch processing
 - Automatically detect if a step has already been completed (look for output file); add universal option to always overwrite
 - Add some better exception handling; e.g. if any image file is missing from the images output, we should restart VEAI and re-do only the missing images
 - Email notification of status/errors
 - Migrate handling of subtitles from ffmpeg to mkvmerge. (It makes more sense to keep the FFMpeg part of this as simple as possible since it's a far more complex tool; do anything we can do with mkvemerge there)
-- Make configuration better
+- Make configuration (much) better
+- Have other encoding options/configuration
 - Add documention (automation?) for installing all the avisynth dependencies
 - don't hardcode types for the avisynth scripts, these should be runtime configurable
 
@@ -56,8 +58,22 @@ There's no complilation for this project right now. Instead just run everything 
 > git clone https://github.com/jamietre/dvd-upscale.git
 > cd dvd-upscale
 > ts-node ./src/decrypt-cli -p voyager -drive i
-
+> ts-node ./src/process-cli voyager s1e01
 ```
+
+There are entry points for each step; `process-cli` just runs everything. Just look at `process-cli.ts` to see what it does.
+
+Every cli entry point has help that will be printed if invoked with `--help`
+
+### Decrypt
+
+There's a hash stored for every disc of projects I know about. There may be more than one release of a DVD which has a different hash, but if they match, you should be able to rip all your discs by running this for each disc (assuming your drive is letter I:/)
+
+> ts-node ./src/decrypt-cli -p voyager -drive i
+
+The disc will be detected and all the correct VOBs ripped with episodes/titles for the filenames. You can update the has files (and make a PR if you want) for something that wasn't found, e.g.:
+
+> ts-node ./src/decrypt-cli -p voyager -drive i -u -season 1 -disc 1
 
 ## Contents
 

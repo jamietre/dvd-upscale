@@ -25,6 +25,7 @@ export async function preprocess(episode: Episode) {
         ouptutFileBase: `${workDir}/${baseFileName}.tmp`,
         timecodeFileName: `${workDir}/${baseFileName}.timecodes.txt`,
       };
+      console.log(`Running avisynth script "${script.scriptPath}", pass ${pass} of ${passes}`);
       await avis.run({
         script: scriptText,
         workDir,

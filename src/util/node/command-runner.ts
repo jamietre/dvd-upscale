@@ -12,6 +12,7 @@ export type RunCommandOptions = {
   logReader?: LogReader;
   messageHandler?: (message: string) => void;
   showCommand?: boolean;
+  successCodes?: number[];
 } & SpawnOptions;
 
 const stdoutLogReader = (message: string) => process.stdout.write(message);
@@ -33,6 +34,7 @@ export class CommandRunner {
    */
   async run(command: string, args: string[] = [], options: RunCommandOptions = {}): Promise<void> {
     const errors: string[] = [];
+    const successCodes = options.successCodes || [0];
     const { logReader, messageHandler, ...nodeOptions } = options;
     const reader = logReader || stdoutLogReader;
 
@@ -64,7 +66,7 @@ export class CommandRunner {
       deferred.reject(err);
     });
     child.on("exit", code => {
-      if (code === 0) {
+      if (successCodes.includes(Number(code))) {
         deferred.resolve();
         return;
       }
@@ -98,5 +100,14 @@ export async function runCommandInteractive(command: string, args: string[]) {
 }
 
 function formatArgs(args: string[]): string {
-  return args.map(e => (e.includes(" ") || e.includes(":") ? `"${e}"` : e)).join(" ");
+  const out: string[] = [];
+  args.forEach(arg => {
+    const quotedArg = arg.includes(" ") ? `"${arg}"` : arg;
+    const lastArg = out.length > 0 ? out[out.length - 1] : "";
+    if ((!lastArg.startsWith("-") && arg.startsWith("-")) || lastArg.length > 40) {
+      out.push("\n");
+    }
+    out.push(quotedArg);
+  });
+  return out.join(" ");
 }
