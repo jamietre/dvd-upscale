@@ -11,7 +11,7 @@ Tooling to automate workflows for processing video. The core of this is TypeScri
 
 ## Project Goals
 
-- The ability to take in input VOB file and completely process it through a variety of user-configured steps without any user intervention.
+- The ability to take in input file and completely process it through a variety of user-configured steps without any user intervention.
 - Maintain a consistent pattern for organizing work files
 - Allow management of profiles for each project
 - Ability to optimize computing resources, e.g. run tasks in parallel that do not share the same resources. For example, VEAI uses GPU only, whereas ffmpeg encoding (probably) uses CPU. We should be able to queue up tasks and have successive tasks run in sequence whenever a resource is available.
@@ -57,6 +57,7 @@ There's no complilation for this project right now. Instead just run everything 
 > yarn add -g ts-node
 > git clone https://github.com/jamietre/dvd-upscale.git
 > cd dvd-upscale
+
 > ts-node ./src/decrypt-cli -p voyager -drive i
 > ts-node ./src/process-cli voyager s1e01
 ```

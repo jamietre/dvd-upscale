@@ -139,6 +139,118 @@
       "hashes": [
         "4a3dc06eac47747851816a6fd001fb7aec5cec0a"
       ]
+    },
+    {
+      "season": 3,
+      "disc": 1,
+      "hashes": [
+        "78a3a9dd5fdc656cbb563f4c0f227ddde5821d85"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 2,
+      "hashes": [
+        "05a046c83deb5489d77bca013dfa2f8fa19fc24a"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 3,
+      "hashes": [
+        "2fc75596a845c7b75e484a187f65918990effcfe"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 4,
+      "hashes": [
+        "073ebb354790c0668e1ed1d06a2a3053e73fbda5"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 5,
+      "hashes": [
+        "8869726f175a59529c6222fbd02a61c06ddf1756"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 6,
+      "hashes": [
+        "2aa08e60a150c9d4bdbf3a575b4b641b6d3f93ea"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 7,
+      "hashes": [
+        "418d2e281887b61ce8037cd79bc67b7486e799d1"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 8,
+      "hashes": [
+        "bdffa6547f1cc8f93e2525d9c90c76e82e03283b"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 9,
+      "hashes": [
+        "bdfe89a3507325f1508d732013ebf6f7cd4626cb"
+      ]
+    },
+    {
+      "season": 3,
+      "disc": 10,
+      "hashes": [
+        "56aebbe2dd11bb963fb630ba457faba971ad2b72"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 1,
+      "hashes": [
+        "4ff57b0d1359e6b686db49feb67a26e8196ce0c7"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 2,
+      "hashes": [
+        "dc5796e81142906ff08315c62ddddd33d725cb08"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 3,
+      "hashes": [
+        "263ceac1ca9539585e031ff65df49b412aa9cf6b"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 4,
+      "hashes": [
+        "8c695d231b940e7ab5928d474f618b7d9797b4fc"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 5,
+      "hashes": [
+        "9ccbda07ae74a896a0da60036ab1b757cbe25ab7"
+      ]
+    },
+    {
+      "season": 4,
+      "disc": 6,
+      "hashes": [
+        "45bb357fc54f4f1678ac97309fc39380b6430478"
+      ]
     }
   ],
   "episodes": [
@@ -672,6 +784,420 @@
       "disc": 10,
       "vts": 1,
       "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "The Her Masters Voice Affair",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "The Sort of Do-It-Yourself Dreadful Affair",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "The Galatea Affair",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "The Super-Colossal Affair",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "The Monks of St Thomas Affair",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "The Pop Art Affair",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "The Thor Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "The Candidates Wife Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "The Come with Me to the Casbah Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "The Off Broadway Affair",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "he Concrete Overcoat Affair Part 1",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "he Concrete Overcoat Affair Part 2",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "The Abominable Snowman Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "The My Friend the Gorilla Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "he Jingle Bells Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "The Take Me to Your Leader Affair",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "17",
+      "episodeOrder": 17,
+      "title": "he Suburbia Affair",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "18",
+      "episodeOrder": 18,
+      "title": "The Deadly Smorgasbord Affair",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "19",
+      "episodeOrder": 19,
+      "title": "The Yo-Ho-Ho and a Bottle of Rum Affair",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "20",
+      "episodeOrder": 20,
+      "title": "The Napoleons Tomb Affair",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "21",
+      "episodeOrder": 21,
+      "title": "The Its All Greek to Me Affair",
+      "disc": 7,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "22",
+      "episodeOrder": 22,
+      "title": "The Hula Doll Affair",
+      "disc": 8,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "23",
+      "episodeOrder": 23,
+      "title": "The Pieces of Fate Affair",
+      "disc": 8,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "24",
+      "episodeOrder": 24,
+      "title": "The Matterhorn Affair",
+      "disc": 8,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "25",
+      "episodeOrder": 25,
+      "title": "The Hot Number Affair",
+      "disc": 9,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "26",
+      "episodeOrder": 26,
+      "title": "The When in Roma Affair",
+      "disc": 9,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "27",
+      "episodeOrder": 27,
+      "title": "The Apple a Day Affair",
+      "disc": 9,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 3,
+      "episodeNum": "28",
+      "episodeOrder": 28,
+      "title": "The Five Daughters Affair Part 1",
+      "disc": 10,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 3,
+      "episodeNum": "29",
+      "episodeOrder": 29,
+      "title": "The Five Daughters Affair Part 2",
+      "disc": 10,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 3,
+      "episodeNum": "30",
+      "episodeOrder": 30,
+      "title": "The Cap and Gown Affair",
+      "disc": 10,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 4,
+      "episodeNum": "01",
+      "episodeOrder": 1,
+      "title": "The Summit-Five Affair",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "02",
+      "episodeOrder": 2,
+      "title": "The Test Tube Killer Affair",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "03",
+      "episodeOrder": 3,
+      "title": "The J for Judas Affair",
+      "disc": 1,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 4,
+      "episodeNum": "04",
+      "episodeOrder": 4,
+      "title": "The Prince of Darkness Affair Part 1",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "05",
+      "episodeOrder": 5,
+      "title": "The Prince of Darkness Affair Part 2",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "06",
+      "episodeOrder": 6,
+      "title": "The Masters Touch Affair",
+      "disc": 2,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 4,
+      "episodeNum": "07",
+      "episodeOrder": 7,
+      "title": "The THRUSH Roulette Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "08",
+      "episodeOrder": 8,
+      "title": "The Deadly Quest Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "09",
+      "episodeOrder": 9,
+      "title": "The Fiery Angel Affair",
+      "disc": 3,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 4,
+      "episodeNum": "10",
+      "episodeOrder": 10,
+      "title": "The Survival School Affair",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "11",
+      "episodeOrder": 11,
+      "title": "The Gurnius Affair",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "12",
+      "episodeOrder": 12,
+      "title": "The Man from THRUSH Affair",
+      "disc": 4,
+      "vts": 1,
+      "pgc": 3
+    },
+    {
+      "season": 4,
+      "episodeNum": "13",
+      "episodeOrder": 13,
+      "title": "The Maze Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "14",
+      "episodeOrder": 14,
+      "title": "The Deep Six Affair",
+      "disc": 5,
+      "vts": 1,
+      "pgc": 2
+    },
+    {
+      "season": 4,
+      "episodeNum": "15",
+      "episodeOrder": 15,
+      "title": "The Seven Wonders of the World Affair Part 1",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 1
+    },
+    {
+      "season": 4,
+      "episodeNum": "16",
+      "episodeOrder": 16,
+      "title": "The Seven Wonders of the World Affair Part 2",
+      "disc": 6,
+      "vts": 1,
+      "pgc": 2
     }
   ]
 }
